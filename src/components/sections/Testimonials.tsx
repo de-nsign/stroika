@@ -25,11 +25,10 @@ export default function Testimonials() {
           <motion.div
             key={review.author}
             variants={fadeInUp}
-            className="flex flex-col justify-between rounded-[24px] bg-surface-muted p-8"
-            style={{ minHeight: 320 }}
+            className="flex flex-col gap-6 rounded-[24px] bg-surface-muted p-8"
           >
-            <p className=" text-sm font-medium text-primary-600">{review.date}</p>
-            <div className="">
+            <p className="text-sm font-medium text-primary-600">{review.date}</p>
+            <div>
               <p className="mb-4 text-base font-medium leading-relaxed text-primary">
                 &ldquo;{review.text}&rdquo;
               </p>

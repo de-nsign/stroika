@@ -25,7 +25,7 @@ export default function SectionWrapper({
         : 'bg-white';
 
   return (
-    <section id={id} className={`py-16 lg:py-20 ${bgClass} ${className}`}>
+    <section id={id} className={`py-10 lg:py-20 ${bgClass} ${className}`}>
       <motion.div
         className="mx-auto max-w-[1440px] px-6 lg:px-10"
         variants={staggerContainer}

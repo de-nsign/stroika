@@ -18,7 +18,7 @@ export default function KeyAssets() {
       />
       <motion.p
         variants={fadeInUp}
-        className="mx-auto mb-16 max-w-2xl text-center text-base text-primary-600 lg:text-lg"
+        className="mx-auto mb-8 max-w-2xl text-center text-base text-primary-600 md:mb-16 lg:text-lg"
       >
         {KEY_ASSETS.subheading}
       </motion.p>
@@ -30,9 +30,9 @@ export default function KeyAssets() {
             key={card.title}
             href={card.href}
             variants={fadeInUp}
-            className="group relative h-[440px] overflow-hidden rounded-[24px] bg-[#f7f7f5]"
+            className="group relative h-[340px] overflow-hidden rounded-[24px] bg-[#f7f7f5] md:h-[440px]"
           >
-            <div className="absolute inset-0 scale-90">
+            <div className="absolute inset-0 scale-100 md:scale-90">
               <Image
                 src={card.image}
                 alt={card.title}
