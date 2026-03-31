@@ -32,7 +32,7 @@ export default function KeyAssets() {
             variants={fadeInUp}
             className="group relative h-[340px] overflow-hidden rounded-[24px] bg-[#f7f7f5] md:h-[440px]"
           >
-            <div className="absolute inset-0 scale-100 md:scale-90">
+            <div className="absolute inset-0 scale-90 md:scale-[0.81]">
               <Image
                 src={card.image}
                 alt={card.title}
