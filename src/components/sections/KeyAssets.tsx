@@ -43,7 +43,7 @@ export default function KeyAssets() {
             </div>
 
             {/* Hover arrow button — donor style */}
-            <div className="absolute top-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+            <div className="absolute top-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white transition-all duration-300 md:opacity-0 md:group-hover:opacity-100">
               <ArrowUpRight className="h-5 w-5" />
             </div>
 
