@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 right-0 left-0 z-50 flex items-center justify-between bg-white px-4 pb-3 pt-[calc(0.75rem_+_env(safe-area-inset-top,_0px))] transition-shadow duration-300 before:absolute before:inset-x-0 before:bottom-full before:h-[200px] before:bg-white md:px-6 md:py-4 lg:px-10 ${scrolled ? 'shadow-sm' : ''}`}
+      className={`fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem_+_env(safe-area-inset-top,_0px))] transition-all duration-300 md:px-6 md:py-4 lg:px-10 ${scrolled ? 'bg-white shadow-sm before:absolute before:inset-x-0 before:bottom-full before:h-[200px] before:bg-white' : 'bg-transparent'}`}
     >
       {/* Logo */}
       <Link href="/" className="font-display text-lg font-bold">
