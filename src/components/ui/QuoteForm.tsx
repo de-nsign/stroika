@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, ChevronDown } from 'lucide-react';
-import { fadeInUp } from '@/lib/animations';
+import { formReveal } from '@/lib/animations';
 import { SITE } from '@/lib/constants';
 
 const EQUIPMENT_OPTIONS = [
@@ -83,7 +83,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
   return (
     <motion.form
       onSubmit={handleSubmit}
-      variants={fadeInUp}
+      variants={formReveal}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -101,7 +101,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
           <input
             name="name"
             required
-            className="w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+            className="input-focus w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none"
             placeholder="Your name"
           />
         </div>
@@ -113,7 +113,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
             name="phone"
             type="tel"
             required
-            className="w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+            className="input-focus w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none"
             placeholder="+971 ..."
           />
         </div>
@@ -124,7 +124,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
           <input
             name="email"
             type="email"
-            className="w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+            className="input-focus w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none"
             placeholder="email@company.com"
           />
         </div>
@@ -143,7 +143,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
               <select
                 name="equipment"
                 required
-                className="w-full appearance-none rounded-[16px] border border-primary-100 bg-white px-4 pr-10 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+                className="input-focus w-full appearance-none rounded-[16px] border border-primary-100 bg-white px-4 pr-10 py-3 text-sm text-primary outline-none"
               >
                 <option value="">Select equipment</option>
                 {EQUIPMENT_OPTIONS.map((opt) => (
@@ -162,7 +162,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
           </label>
           <input
             name="location"
-            className="w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+            className="input-focus w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none"
             placeholder="e.g. Limassol, Nicosia, Paphos"
           />
         </div>
@@ -173,7 +173,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
           <textarea
             name="message"
             rows={4}
-            className="w-full resize-none rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+            className="input-focus w-full resize-none rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none"
             placeholder="Tell us about your project..."
           />
         </div>
@@ -181,7 +181,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
 
       <button
         type="submit"
-        className="mt-6 flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
+        className="btn-hover mt-6 flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
       >
         <Send className="h-4 w-4" />
         Send Request

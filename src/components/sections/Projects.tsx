@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import SectionWrapper from '@/components/ui/SectionWrapper';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
+import { projectCard, blurReveal, staggerContainer, EASE_REVEAL } from '@/lib/animations';
 import { PROJECTS } from '@/lib/constants';
 
 export default function Projects() {
   return (
     <section className="bg-white">
-      {/* Full-bleed photo top half — donor "Careers" pattern */}
+      {/* Full-bleed photo top half */}
       <div className="relative min-h-[450px] overflow-hidden">
         <Image
           src="/images/project-hero.jpg"
@@ -26,31 +26,25 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={staggerContainer}
+          variants={blurReveal}
         >
-          <motion.h2
-            variants={fadeInUp}
-            className="font-display mb-3 text-4xl font-light text-accent md:text-6xl"
-          >
+          <h2 className="font-display mb-3 text-4xl font-light text-accent md:text-6xl">
             Projects Across
-          </motion.h2>
-          <motion.h2
-            variants={fadeInUp}
-            className="font-display text-4xl font-light text-white md:text-6xl"
-          >
+          </h2>
+          <h2 className="font-display text-4xl font-light text-white md:text-6xl">
             Cyprus
-          </motion.h2>
-          <motion.p variants={fadeInUp} className="mt-4 max-w-lg text-base text-white/70">
+          </h2>
+          <p className="mt-4 max-w-lg text-base text-white/70">
             From bulk excavation to full site preparation — delivering results on landmark developments.
-          </motion.p>
+          </p>
         </motion.div>
 
-        {/* Slider card floating on the right — donor pattern */}
+        {/* Slider card floating on the right */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.4, duration: 0.6, ease: EASE_REVEAL }}
           className="absolute right-6 bottom-8 z-20 hidden w-[340px] rounded-[24px] bg-accent p-6 text-white lg:right-10 lg:block"
         >
           <p className="text-sm leading-relaxed text-white/90">
@@ -70,10 +64,10 @@ export default function Projects() {
             <span>03</span>
           </div>
           <div className="flex gap-2">
-            <button className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-100 text-primary-500 hover:bg-primary-50" aria-label="Previous">
+            <button className="btn-hover flex h-11 w-11 items-center justify-center rounded-full border border-primary-100 text-primary-500 hover:bg-primary-50" aria-label="Previous">
               <ArrowLeft className="h-4 w-4" />
             </button>
-            <button className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-100 text-primary hover:bg-primary-50" aria-label="Next">
+            <button className="btn-hover flex h-11 w-11 items-center justify-center rounded-full border border-primary-100 text-primary hover:bg-primary-50" aria-label="Next">
               <ArrowRight className="h-4 w-4" />
             </button>
           </div>
@@ -90,14 +84,14 @@ export default function Projects() {
             <motion.a
               key={project.title}
               href={project.href}
-              variants={fadeInUp}
+              variants={projectCard}
               className="group relative h-[280px] overflow-hidden rounded-[24px]"
             >
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="img-zoom object-cover"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />

@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import AnimatedHeading from '@/components/ui/AnimatedHeading';
 import SectionWrapper from '@/components/ui/SectionWrapper';
-import { fadeInUp } from '@/lib/animations';
+import { productSlideLeft, productSlideRight } from '@/lib/animations';
 import { PRODUCTS_DUAL } from '@/lib/constants';
 
 const BUTTON_COLORS = ['bg-accent', 'bg-primary'];
+const cardVariants = [productSlideLeft, productSlideRight];
 
 export default function ProductsDual() {
   return (
@@ -19,13 +20,16 @@ export default function ProductsDual() {
         accentWords={['ways', 'done']}
       />
 
-      {/* 2 cards — donor style with icon patterns and arrow buttons */}
+      {/* 2 cards — slide in from opposite sides */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {PRODUCTS_DUAL.map((card, i) => (
           <motion.a
             key={card.title}
             href={card.href}
-            variants={fadeInUp}
+            variants={cardVariants[i % 2]}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-80px' }}
             className="group relative flex h-[460px] flex-col justify-end overflow-hidden rounded-[24px]"
           >
             {/* Full-bleed background image */}
@@ -33,10 +37,10 @@ export default function ProductsDual() {
               src={card.image}
               alt={card.title}
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="img-zoom object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
-            {/* Gradient overlay — heavier at bottom for text legibility */}
+            {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
             {/* Hover arrow top-right */}
@@ -44,7 +48,7 @@ export default function ProductsDual() {
               <ArrowUpRight className="h-5 w-5" />
             </div>
 
-            {/* Text at bottom-left — donor style */}
+            {/* Text at bottom-left */}
             <div className="relative z-10 p-8 lg:p-10">
               <h3 className="font-display mb-2 text-3xl font-light text-white md:text-4xl">
                 {card.title}
