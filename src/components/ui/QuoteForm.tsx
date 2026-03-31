@@ -59,7 +59,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="rounded-[24px] bg-surface-muted p-8 text-center lg:p-12"
+        className="bg-surface-muted p-8 text-center lg:rounded-[24px] lg:p-12"
       >
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-accent-50">
           <Send className="h-7 w-7 text-accent" />
@@ -87,7 +87,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="rounded-[24px] bg-surface-muted p-8 lg:p-12"
+      className="bg-surface-muted p-8 lg:rounded-[24px] lg:p-12"
     >
       <h3 className="font-display mb-8 text-2xl font-light text-primary md:text-3xl">
         Request a Quote
@@ -142,7 +142,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
             <select
               name="equipment"
               required
-              className="w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+              className="w-full rounded-[16px] border border-primary-100 bg-white px-4 pr-[calc(1rem+5px)] py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
             >
               <option value="">Select equipment</option>
               {EQUIPMENT_OPTIONS.map((opt) => (

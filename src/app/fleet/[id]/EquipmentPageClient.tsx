@@ -13,7 +13,7 @@ import {
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import type { Equipment } from '@/lib/constants';
 import { SITE, WEIGHT_CLASS_LABELS, EQUIPMENT_TYPE_LABELS } from '@/lib/constants';
-import QuoteForm from '@/components/ui/QuoteForm';
+import QuoteSection from '@/components/sections/QuoteSection';
 
 interface Props {
   item: Equipment;
@@ -161,11 +161,7 @@ export default function EquipmentPageClient({ item, otherEquipment }: Props) {
       </section>
 
       {/* Quote Form */}
-      <section id="quote" className="bg-white pb-20 lg:pb-28">
-        <div className="mx-auto max-w-[800px] px-6 lg:px-10">
-          <QuoteForm defaultEquipment={item.name} />
-        </div>
-      </section>
+      <QuoteSection defaultEquipment={item.name} className="pb-20 lg:pb-28" />
 
       {/* Other Equipment */}
       {otherEquipment.length > 0 && (
