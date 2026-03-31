@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -9,11 +9,23 @@ import { SITE, NAV_LINKS } from '@/lib/constants';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <nav
-      className="fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem_+_env(safe-area-inset-top,_0px))] transition-all duration-300 bg-white/95 shadow-sm backdrop-blur-md before:absolute before:inset-x-0 before:bottom-full before:h-[200px] before:bg-white/95 before:backdrop-blur-md md:bg-transparent md:px-6 md:py-4 md:shadow-none md:backdrop-blur-none md:before:hidden lg:px-10"
+      className={`fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem_+_env(safe-area-inset-top,_0px))] transition-all duration-300 md:bg-transparent md:px-6 md:py-4 md:shadow-none md:backdrop-blur-none md:before:hidden lg:px-10 ${
+        scrolled
+          ? 'bg-white/95 shadow-sm backdrop-blur-md before:absolute before:inset-x-0 before:bottom-full before:h-[200px] before:bg-white/95 before:backdrop-blur-md'
+          : 'bg-transparent shadow-none backdrop-blur-none'
+      }`}
     >
       {/* Logo */}
       <Link href="/" className="font-display text-lg font-bold">
