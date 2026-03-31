@@ -19,9 +19,31 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Telegram WebView safe area: env(safe-area-inset-top) returns 0 in TG,
+  // so we read the insets from Telegram SDK and set a CSS custom property.
+  useEffect(() => {
+    const tg = (window as any).Telegram?.WebApp;
+    if (!tg) return;
+    const apply = () => {
+      const safeTop = tg.safeAreaInset?.top || 0;
+      const contentTop = tg.contentSafeAreaInset?.top || 0;
+      const total = safeTop + contentTop;
+      if (total > 0) {
+        document.documentElement.style.setProperty('--tg-safe-top', `${total}px`);
+      }
+    };
+    apply();
+    tg.onEvent?.('safeAreaChanged', apply);
+    tg.onEvent?.('contentSafeAreaChanged', apply);
+    return () => {
+      tg.offEvent?.('safeAreaChanged', apply);
+      tg.offEvent?.('contentSafeAreaChanged', apply);
+    };
+  }, []);
+
   return (
     <nav
-      className={`fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem_+_env(safe-area-inset-top,_0px))] transition-all duration-300 md:px-6 md:py-4 lg:px-10 ${scrolled ? 'max-md:bg-white max-md:shadow-sm' : ''}`}
+      className={`fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem_+_var(--tg-safe-top,_env(safe-area-inset-top,_0px)))] transition-all duration-300 md:px-6 md:py-4 lg:px-10 ${scrolled ? 'max-md:bg-white max-md:shadow-sm' : ''}`}
     >
       {/* Cover area above navbar for iOS in-app browsers (mobile only, on scroll) */}
       {scrolled && <div className="pointer-events-none absolute inset-x-0 bottom-full h-[500px] bg-white md:hidden" />}
