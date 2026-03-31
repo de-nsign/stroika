@@ -21,9 +21,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem_+_env(safe-area-inset-top,_0px))] transition-all duration-300 before:pointer-events-none before:absolute before:inset-x-0 before:bottom-full before:h-[500px] before:bg-white before:content-[''] md:px-6 md:py-4 md:before:hidden lg:px-10"
+      className="fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem_+_env(safe-area-inset-top,_0px))] transition-all duration-300 md:px-6 md:py-4 lg:px-10"
       style={scrolled ? { backgroundColor: '#fff', boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1)' } : { backgroundColor: 'transparent' }}
     >
+      {/* Cover area above navbar for iOS in-app browsers (mobile only) */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-full h-[500px] bg-white md:hidden" />
       {/* Logo */}
       <Link href="/" className="font-display text-lg font-bold">
         {/* eslint-disable-next-line @next/next/no-img-element */}
