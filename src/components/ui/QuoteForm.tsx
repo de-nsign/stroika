@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send } from 'lucide-react';
+import { Send, ChevronDown } from 'lucide-react';
 import { fadeInUp } from '@/lib/animations';
 import { SITE } from '@/lib/constants';
 
@@ -139,18 +139,21 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
               className="w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none"
             />
           ) : (
-            <select
-              name="equipment"
-              required
-              className="w-full rounded-[16px] border border-primary-100 bg-white px-4 pr-[calc(1rem+5px)] py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
-            >
-              <option value="">Select equipment</option>
-              {EQUIPMENT_OPTIONS.map((opt) => (
-                <option key={opt} value={opt}>
-                  {opt}
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                name="equipment"
+                required
+                className="w-full appearance-none rounded-[16px] border border-primary-100 bg-white px-4 pr-10 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
+              >
+                <option value="">Select equipment</option>
+                {EQUIPMENT_OPTIONS.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-primary-400" />
+            </div>
           )}
         </div>
         <div className="md:col-span-2">
