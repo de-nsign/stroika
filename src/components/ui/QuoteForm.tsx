@@ -163,7 +163,7 @@ export default function QuoteForm({ defaultEquipment }: { defaultEquipment?: str
           <input
             name="location"
             className="input-focus w-full rounded-[16px] border border-primary-100 bg-white px-4 py-3 text-sm text-primary outline-none"
-            placeholder="e.g. Limassol, Nicosia, Paphos"
+            placeholder="e.g. Dubai, Abu Dhabi, Sharjah"
           />
         </div>
         <div className="md:col-span-2">

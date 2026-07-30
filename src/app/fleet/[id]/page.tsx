@@ -16,11 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = FLEET.find((e) => e.id === id);
   if (!item) return {};
   return {
-    title: `${item.name} — Rent in Cyprus | Stroika`,
-    description: `Rent ${item.name} (${item.brand}, ${item.weight}) in Cyprus. ${item.specs || ''} Professional equipment rental with certified operators.`,
+    title: `${item.name} — Rent in Dubai | Stroika`,
+    description: `Rent ${item.name} (${item.brand}, ${item.weight}) in Dubai. ${item.specs || ''} Professional equipment rental with certified operators.`,
     openGraph: {
       title: `${item.name} — Stroika Equipment Rental`,
-      description: `Rent ${item.name} in Cyprus. ${item.specs || ''}`,
+      description: `Rent ${item.name} in Dubai. ${item.specs || ''}`,
       type: 'website',
     },
   };

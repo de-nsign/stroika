@@ -78,7 +78,7 @@ export default function FleetPage() {
     <main>
       <InnerHero
         title="Our Equipment"
-        subtitle="27+ machines from world-class brands — modern, maintained, and ready to deploy across Cyprus."
+        subtitle="27+ machines from world-class brands — modern, maintained, and ready to deploy across Dubai."
         breadcrumb="Equipment"
         image="/images/fleet/hf_20260330_071733_cff68166-e762-4167-8917-e35197661f72.webp"
       />

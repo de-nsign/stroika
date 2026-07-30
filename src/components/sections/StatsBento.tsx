@@ -15,9 +15,9 @@ export default function StatsBento() {
     <section id="services" className="bg-surface-muted py-28 lg:py-36">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
         <AnimatedHeading
-          row1={['Powering', "Cyprus's", 'largest']}
+          row1={['Powering', "Dubai's", 'largest']}
           row2={['construction', 'projects']}
-          accentWords={["Cyprus's", 'construction']}
+          accentWords={["Dubai's", 'construction']}
         />
 
         {/* Tabs — donor style: pill with icon + text */}

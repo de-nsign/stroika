@@ -152,7 +152,7 @@ export default function ContactsPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <div className="relative h-[400px] overflow-hidden rounded-[24px]">
             <iframe
-              src="https://maps.google.com/maps?q=28+Anexartisias+Street,+Limassol+3036,+Cyprus&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Al+Quoz+Industrial+Area+3,+Dubai,+UAE&t=&z=14&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

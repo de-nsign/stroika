@@ -32,7 +32,7 @@ export default function Projects() {
             Projects Across
           </h2>
           <h2 className="font-display text-4xl font-light text-white md:text-6xl">
-            Cyprus
+            Dubai
           </h2>
           <p className="mt-4 max-w-lg text-base text-white/70">
             From bulk excavation to full site preparation — delivering results on landmark developments.
