@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { FLEET } from '@/lib/constants';
+import { FLEET, SITE } from '@/lib/constants';
 import EquipmentPageClient from './EquipmentPageClient';
 
 interface Props {
@@ -16,10 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = FLEET.find((e) => e.id === id);
   if (!item) return {};
   return {
-    title: `${item.name} — Rent in Dubai | Heavy Rentals`,
+    title: `${item.name} — Rent in Dubai | ${SITE.name}`,
     description: `Rent ${item.name} (${item.brand}, ${item.weight}) in Dubai. ${item.specs || ''} Professional equipment rental with certified operators.`,
     openGraph: {
-      title: `${item.name} — Heavy Rentals Equipment Rental`,
+      title: `${item.name} — ${SITE.name}`,
       description: `Rent ${item.name} in Dubai. ${item.specs || ''}`,
       type: 'website',
     },

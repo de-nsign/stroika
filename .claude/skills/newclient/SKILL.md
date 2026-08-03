@@ -24,6 +24,37 @@ find yourself editing a component to fit a client, stop — that is a signal the
 template needs a new data field, not a fork. Add the field to `constants.ts`,
 read it in the component, and it works for every future client too.
 
+### Template fixes go to `main`, immediately
+
+This is the rule that has failed most often, and it is what makes the user
+repeat themselves.
+
+When you fix something in the template during a rollout — a wrong `fill`/`hug`,
+a hardcoded string, a component that assumes data every client has — that fix
+**must land on `main`**, not sit on the client branch. Otherwise the next client
+branches from `main`, hits the identical bug, and the user reports it again.
+
+It has already happened three times over: `PAGE_HEROES` was independently
+reinvented on three separate client branches, and the `bg-cover` → `bg-contain`
+cut-out fix was made once and then re-reported on the next two clients.
+
+So, the moment a template fix builds green:
+
+```bash
+git stash                                   # park the client content
+git checkout main
+git checkout <client-branch> -- <the component files you fixed>
+# re-add any constants.ts fields with TEMPLATE values, not the client's
+npm run build && git commit && git push origin main
+git checkout <client-branch> && git stash pop
+```
+
+Client content — `constants.ts` copy, images, `site.json` — stays on the client
+branch. Only the structural change goes to `main`.
+
+Before starting a rollout, check you are not about to re-fix something:
+`git log --oneline main -15`.
+
 Run every command from the repo root.
 
 ---

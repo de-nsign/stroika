@@ -7,6 +7,11 @@ export const SITE = {
   email: 'info@heavyrentals.ae',
   address: 'Warehouse 7, Al Quoz Industrial Area 3, Dubai, UAE',
   hours: 'Mon–Sat: 7:00 AM – 7:00 PM (GST)',
+  /* 'wordmark' draws the built-in mark + SITE.name. scripts/client/apply.mjs
+     rewrites this to 'image' or 'mark' with the client's own artwork. */
+  logo: {
+    mode: 'wordmark',
+  },
 };
 
 export const NAV_LINKS = [
@@ -23,6 +28,58 @@ export const HERO = {
     'Trusted fleet of heavy machinery. Certified operators. End-to-end site logistics from Dubai to Abu Dhabi. One partner for every project phase.',
   cta_primary: 'Explore Equipment',
   cta_secondary: 'Request a Quote',
+  /* Animated counters under the hero copy. `suffix` is rendered verbatim. */
+  stats: [
+    { target: 30, suffix: '+', label: 'machines' },
+    { target: 3, suffix: '', label: 'equipment classes' },
+  ],
+};
+
+/* Inner-page hero copy. Kept here rather than inline in each page file so a
+   client rollout is a single data edit — three separate agents each rewrote
+   these by hand before they lived here. */
+export const PAGE_HEROES = {
+  fleet: {
+    title: 'Our Equipment',
+    subtitle:
+      'Modern, maintained machinery from world-class brands, ready to deploy across the UAE.',
+    breadcrumb: 'Equipment',
+    image: '/images/fleet/hf_20260330_071733_cff68166-e762-4167-8917-e35197661f72.webp',
+  },
+  solutions: {
+    title: 'Solutions by Job',
+    subtitle: 'Turnkey site solutions managed by experts — from permits to cleanup.',
+    breadcrumb: 'Solutions',
+    image: '/images/solutions/hero.webp',
+  },
+  services: {
+    title: 'Value-Added Services',
+    subtitle:
+      'Beyond equipment rental — certified operators, logistics, and support to keep your project moving.',
+    breadcrumb: 'Services',
+    image: '/images/services/hero.webp',
+  },
+  contacts: {
+    title: 'Get in Touch',
+    subtitle:
+      'Our team is ready to help you find the right equipment and services for your project.',
+    breadcrumb: 'Contacts',
+    image: '/images/contacts/hero.webp',
+  },
+};
+
+/* Headings split into animated word rows. Words in `accent` are highlighted and
+   must match a word in row1/row2 exactly. */
+export const STATS_HEADING = {
+  row1: ['Powering', "Dubai's", 'largest'],
+  row2: ['construction', 'projects'],
+  accent: ["Dubai's", 'construction'],
+};
+
+export const PROJECTS_INTRO = {
+  headingAccent: 'Projects Across',
+  heading: 'Dubai',
+  text: 'From bulk excavation to full site preparation — delivering results on landmark developments.',
 };
 
 export const KEY_ASSETS = {
@@ -227,7 +284,8 @@ export interface Equipment {
   id: string;
   name: string;
   brand: string;
-  weight: string;
+  /* Optional: many yards publish no tonnage. Components hide the badge. */
+  weight?: string;
   weightClass: WeightClass;
   type: EquipmentType;
   tags: EquipmentTag[];
