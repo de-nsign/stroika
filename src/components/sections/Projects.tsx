@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import { projectCard, blurReveal, staggerContainer, EASE_REVEAL } from '@/lib/animations';
-import { PROJECTS, SITE } from '@/lib/constants';
+import { PROJECTS, PROJECTS_INTRO, SITE } from '@/lib/constants';
 
 export default function Projects() {
-  /* Clients without published case studies ship without this section. */
+  /* Clients without published case studies ship without this section rather
+     than with invented ones. */
   if (PROJECTS.length === 0) return null;
 
   return (
@@ -17,7 +18,7 @@ export default function Projects() {
       <div className="relative min-h-[450px] overflow-hidden">
         <Image
           src="/images/project-hero.jpg"
-          alt={`${SITE.name} Projects`}
+          alt={`${SITE.name} projects`}
           fill
           className="object-cover"
           sizes="100vw"
@@ -32,13 +33,13 @@ export default function Projects() {
           variants={blurReveal}
         >
           <h2 className="font-display mb-3 text-4xl font-light text-accent md:text-6xl">
-            Projects Across
+            {PROJECTS_INTRO.headingAccent}
           </h2>
           <h2 className="font-display text-4xl font-light text-white md:text-6xl">
-            Dubai
+            {PROJECTS_INTRO.heading}
           </h2>
           <p className="mt-4 max-w-lg text-base text-white/70">
-            From bulk excavation to full site preparation — delivering results on landmark developments.
+            {PROJECTS_INTRO.text}
           </p>
         </motion.div>
 

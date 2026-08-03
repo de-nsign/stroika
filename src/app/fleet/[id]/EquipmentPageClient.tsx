@@ -63,7 +63,7 @@ export default function EquipmentPageClient({ item, otherEquipment }: Props) {
             >
               <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[3/2]">
                 <div
-                  className="h-full w-full bg-cover bg-center bg-no-repeat"
+                  className="h-full w-full bg-contain bg-center bg-no-repeat p-4"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 />
                 {/* Tags */}
@@ -116,12 +116,10 @@ export default function EquipmentPageClient({ item, otherEquipment }: Props) {
                   Specifications
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {item.weight && (
-                    <span className="flex items-center gap-1.5 rounded-full bg-surface-muted px-4 py-2 text-sm text-primary-600">
-                      <Info className="h-3.5 w-3.5 text-accent" />
-                      Weight: {item.weight}
-                    </span>
-                  )}
+                  <span className="flex items-center gap-1.5 rounded-full bg-surface-muted px-4 py-2 text-sm text-primary-600">
+                    <Info className="h-3.5 w-3.5 text-accent" />
+                    Weight: {item.weight}
+                  </span>
                   <span className="rounded-full bg-surface-muted px-4 py-2 text-sm text-primary-600">
                     Class: {WEIGHT_CLASS_LABELS[item.weightClass]}
                   </span>
@@ -192,7 +190,7 @@ export default function EquipmentPageClient({ item, otherEquipment }: Props) {
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <div
-                        className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full bg-contain bg-center bg-no-repeat p-4 transition-transform duration-500 group-hover:scale-105"
                         style={{ backgroundImage: `url('${eq.image}')` }}
                       />
                       {eq.tags.length > 0 && (

@@ -171,6 +171,14 @@ export const PRODUCTS_DUAL = [
 
 /* GrowthLift publish no project case studies, so the section is left off the home
    page rather than filled with invented references. */
+/* GrowthLift publish no case studies, so the section renders nothing rather
+   than inventing projects. PROJECTS_INTRO is kept for when they supply some. */
+export const PROJECTS_INTRO = {
+  headingAccent: 'Projects Across',
+  heading: 'the UAE',
+  text: 'Earth moving, access platforms and lifting equipment on sites across the Emirates.',
+};
+
 export const PROJECTS: {
   title: string;
   description: string;
