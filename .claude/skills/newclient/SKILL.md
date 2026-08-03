@@ -10,8 +10,13 @@ description: >
 
 # New client rollout
 
-One URL in, a reviewable branded site out. The mechanical parts are scripted so
-they cannot drift; the judgement parts are yours.
+One URL in, and a link the user can forward to the client out. The mechanical
+parts are scripted so they cannot drift; the judgement parts are yours.
+
+**Reply to the user in Russian.** They write in Russian and have had to ask for
+this more than once. Code and commits stay in English.
+
+**Finish with a public link.** Step 8 is not optional and not the user's job.
 
 **The template is never structurally edited for a client.** All copy lives in
 `src/lib/constants.ts` and all brand identity is stamped by `apply.mjs`. If you
@@ -218,19 +223,61 @@ Any hardcoded string you find in a component is a template bug: move it into
 `constants.ts` and read it from there. That is how the pipeline gets better with
 each client instead of accumulating per-client hacks.
 
-## 8. Commit and hand over
+## 8. Ship the link
+
+**The link is the deliverable.** Not the branch, not the commit — the URL the
+user forwards to the client. A rollout that ends without a working public link
+is not finished, however good the build is.
 
 ```bash
 git add -A && git commit -m "client: <name> — <url>"
 git push -u origin client/<short-slug>
+node scripts/client/deploy.mjs <slug>
 ```
 
-Vercel builds a preview URL from the branch. Report to the user:
+`deploy.mjs` exists because the same three things broke by hand every time:
 
-- the preview URL
+1. **The URL must look like the client's own.** Never hand over
+   `heavy-rentals-git-client-x-denisartemmenko-3788s-projects.vercel.app` — it
+   shows the template's name and the account slug. The script gives each client
+   their own Vercel project and aliases it to their domain with `.com` swapped
+   for `.vercel.app`: `albadarmobilecrane.com` → `albadarmobilecrane.vercel.app`.
+2. **Vercel protects new projects by default,** so the link bounces the client
+   to a Vercel login. The script turns protection off. This is invisible from
+   your own browser because you are already signed in — which is exactly how it
+   shipped broken more than once.
+3. **The alias points at one immutable build** and goes stale after the next
+   push, so the script re-points it every run.
+
+The script finishes by fetching five pages with no cookies and refuses to
+declare success if any of them redirect to a Vercel login. **Never report a link
+you have not seen pass that check** — a signed-in browser will happily show you
+a page the client cannot open.
+
+## 9. Hand over
+
+Report to the user, in the language they are writing to you in:
+
+- **the link, first, on its own line**
 - what you could not source and left as template default
 - contradictions and placeholder data found on the client's site
-- anything you need from the client (a vector logo is the usual one)
+- what you need from the client — a vector logo and a simplified icon mark are
+  the usual two, real yard photography the most valuable
 
-If the client signs, split the branch into its own repo and Vercel project so
-the template stays a template.
+If the client signs, move the branch to its own repo so the template stays a
+template. The Vercel project is already separate.
+
+## Standing rules
+
+Things the user has had to repeat. Do not make them say these again.
+
+- **Answer in Russian.** The user writes in Russian; reply in Russian unless
+  they switch. Code, commit messages, identifiers and file contents stay in
+  English.
+- **Lead with the link.** Every hand-off message starts with the URL.
+- **Never change the accent colour.** See step 3.
+- **Never leave the template's favicon.** See step 5.
+- **Never leave a link behind a Vercel login.** See step 8.
+- **Look at what you shipped.** Open the built pages, view large images at full
+  size, check the browser tab. Most of the misses above were invisible in a
+  page-level screenshot and obvious in ten seconds of actually looking.
