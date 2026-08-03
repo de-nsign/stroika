@@ -11,9 +11,10 @@
  * to optimised webp at the template's own paths.
  */
 
-import { mkdir, readFile, readdir } from 'node:fs/promises';
+import { mkdir, readdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import sharp from 'sharp';
+import { cutout } from './lib/cutout.mjs';
 
 const argv = process.argv.slice(2);
 const slug = argv.find((a) => !a.startsWith('--'));
@@ -24,6 +25,13 @@ if (!slug) {
 
 const clientDir = join('.context', 'clients', slug);
 const photoDir = join(clientDir, 'photos');
+
+/* Studio shots need their white sweep removed before they sit on the template's
+   grey cards — otherwise they read as white rectangles. */
+const doCutout = argv.includes('--cutout');
+const flag = (n, d) => (argv.includes(n) ? Number(argv[argv.indexOf(n) + 1]) : d);
+const tol = flag('--tol', 20);
+const feather = flag('--feather', 38);
 
 /* --use pairs: <index>=<path under public/images, no extension> */
 const uses = [];
@@ -57,11 +65,29 @@ async function main() {
       }
       const out = join('public', 'images', `${dest}.webp`);
       await mkdir(dirname(out), { recursive: true });
-      await sharp(it.path)
-        .resize({ width: 1600, height: 1200, fit: 'inside', withoutEnlargement: true })
-        .webp({ quality: 82 })
-        .toFile(out);
-      console.log(`  ✓ [${idx}] ${it.f} → ${out}`);
+
+      let pipe = sharp(it.path).resize({
+        width: 1600,
+        height: 1200,
+        fit: 'inside',
+        withoutEnlargement: true,
+      });
+
+      let note = '';
+      if (doCutout) {
+        const { data, info } = await pipe.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+        const res = cutout(data, info.width, info.height, { tol, feather });
+        note = res.removed
+          ? ` · cut out bg rgb(${res.bg.join(',')}), ${((res.cleared / (info.width * info.height)) * 100).toFixed(0)}% cleared`
+          : ' · no flat background found, left as-is';
+        pipe = sharp(data, {
+          raw: { width: info.width, height: info.height, channels: info.channels },
+        }).trim({ threshold: 1 });
+      }
+
+      /* alpha:true keeps the cut-out transparent; webp still beats png here */
+      await pipe.webp({ quality: 86, alphaQuality: 90 }).toFile(out);
+      console.log(`  ✓ [${idx}] ${it.f} → ${out}${note}`);
     }
     return;
   }

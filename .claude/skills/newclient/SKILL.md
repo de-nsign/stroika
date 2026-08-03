@@ -76,9 +76,12 @@ Then Read `public/images/brand/logo.png` to confirm the background knockout and
 trim came out clean. If a solid background survived, raise `--tol`; if the
 knockout ate part of the artwork, lower it or pass `--keep-bg`.
 
-The script also picks the accent colour from the logo's own pixels, cross-checked
-against the colours used on the client's site. If the two disagree wildly, trust
-the logo and note it.
+The script also reports an accent colour derived from the logo's pixels.
+**It is reported, not applied.** The template's orange is the design — it is
+tuned against every surface, shadow and hover state in the system, and
+repainting it with whatever colour a client's logo happens to use makes the
+build look worse, not more theirs. Leave the orange alone unless the user
+explicitly asks for a recolour, in which case add `"accent"` to `site.json`.
 
 ## 4. Photography
 
@@ -89,13 +92,36 @@ node scripts/client/photos.mjs <slug>
 Read `.context/clients/<slug>/photos.png`, then import what is usable:
 
 ```bash
-node scripts/client/photos.mjs <slug> --use 1=fleet/<item> 14=main/hero ...
+node scripts/client/photos.mjs <slug> --cutout --use 1=fleet/<item> ...
 ```
 
 Prefer the client's real machines over the template's generic imagery — a
 contractor recognises their own equipment instantly. Skip stock-looking filler
 and anything from the theme demo. Where the client has no usable photo, leave
 the template image in place and flag the gap in your summary.
+
+**Know which slots take a photo and which take a cut-out.** Getting this wrong
+is the fastest way to make the build look cheap:
+
+| Slot | What belongs there |
+|---|---|
+| `main/hero`, `main/mission`, `project-*` | full-bleed **photography** |
+| `fleet/*`, `main/light‑medium‑heavy`, `PAGE_HEROES[*].image` | **transparent cut-outs**, no background |
+
+The template's inner-page heroes are floating objects on transparent
+backgrounds, never rectangular photos parked in the top-right corner. Look at
+`git show main:public/images/solutions/hero.webp` if you need the reference.
+
+Always pass `--cutout` for the cut-out slots. It flood-fills the studio sweep
+inward from the border (so white cabs and white lettering survive), feathers the
+edge, divides the background back out of semi-transparent pixels so there is no
+pale halo, and fades the drop shadow using a saturation test that leaves the
+paintwork alone. Verify by compositing the result on a dark background — a halo
+that is invisible on white is obvious on black.
+
+If a client's photos are shot on a real scene rather than a sweep, `--cutout`
+detects that and leaves them untouched. Those need proper segmentation (`rembg`,
+or a paid API) — flag it rather than shipping a bad mask.
 
 ## 5. Identity
 

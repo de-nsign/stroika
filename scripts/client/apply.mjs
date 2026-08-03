@@ -44,7 +44,16 @@ async function run() {
     .then(JSON.parse)
     .catch(() => null);
 
-  const accent = site.accent ?? assets?.accent ?? null;
+  /* The template's orange IS the design — it is tuned against every surface,
+     shadow and hover state in the system, and repainting it with whatever colour
+     a client's logo happens to use makes the build look worse, not more theirs.
+     brand.mjs still reports the detected accent; applying it is an explicit
+     opt-in via "accent" in site.json, never the default. */
+  const accent = site.accent ?? null;
+  if (!accent && assets?.accent?.base) {
+    console.log(`  · detected accent ${assets.accent.base} — NOT applied (template orange kept)`);
+    console.log(`    to override, add "accent": ${JSON.stringify(assets.accent)} to site.json`);
+  }
 
   /* ---------------- constants.ts › SITE ---------------- */
 
