@@ -22,11 +22,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Stroika — Heavy Equipment Rental Dubai',
+  title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
   description:
     "Dubai's premier partner for heavy equipment rental and full site solutions. 27+ machines, certified operators, 24/7 support.",
   openGraph: {
-    title: 'Stroika — Heavy Equipment Rental Dubai',
+    title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
     description:
       "Dubai's premier partner for heavy equipment rental and full site solutions.",
     type: 'website',

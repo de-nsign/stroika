@@ -9,7 +9,7 @@ import { SOLUTIONS, SERVICES_PRIMARY } from '@/lib/constants';
 
 const MOBILE_VISIBLE = 10;
 
-/* Combined grid of everything Stroika can do — solutions + services */
+/* Combined grid of everything Heavy Rentals can do — solutions + services */
 const ITEMS = [
   ...SOLUTIONS.map((s) => ({ title: s.title, image: s.image, href: s.href })),
   ...SERVICES_PRIMARY.map((s) => ({ title: s.title, image: s.image, href: s.href })),

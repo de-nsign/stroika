@@ -159,7 +159,7 @@ export default function ContactsPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Stroika office location"
+              title="Heavy Rentals office location"
             />
             <div className="pointer-events-none absolute inset-0 rounded-[24px] ring-1 ring-inset ring-black/5" />
           </div>

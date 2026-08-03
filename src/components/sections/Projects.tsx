@@ -14,7 +14,7 @@ export default function Projects() {
       <div className="relative min-h-[450px] overflow-hidden">
         <Image
           src="/images/project-hero.jpg"
-          alt="Stroika Projects"
+          alt="Heavy Rentals Projects"
           fill
           className="object-cover"
           sizes="100vw"

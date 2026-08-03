@@ -1,10 +1,10 @@
 export const SITE = {
-  name: 'Stroika',
+  name: 'Heavy Rentals',
   tagline: 'Built for Scale',
   phone: '+971 4 362 8000',
   whatsapp: '+971 50 482 1000',
   whatsappLink: 'https://wa.me/971504821000',
-  email: 'info@stroika.ae',
+  email: 'info@heavyrentals.ae',
   address: 'Warehouse 7, Al Quoz Industrial Area 3, Dubai, UAE',
   hours: 'Mon–Sat: 7:00 AM – 7:00 PM (GST)',
 };
@@ -95,7 +95,7 @@ export const STATS_TABS = [
 
 export const MISSION = {
   heading: 'Partners, Not Vendors',
-  text: 'Dubai construction demands precision and reliability at every phase. Stroika operates as an integrated partner — providing modern fleet, certified operators, and complete logistics management under a single contract.',
+  text: 'Dubai construction demands precision and reliability at every phase. Heavy Rentals operates as an integrated partner — providing modern fleet, certified operators, and complete logistics management under a single contract.',
   values: ['Safety', 'Precision', 'Reliability', 'Efficiency'],
 };
 
@@ -167,7 +167,7 @@ export const PROJECTS = [
 
 export const TESTIMONIALS = [
   {
-    text: 'Consistent delivery, professional operators, zero delays. Stroika is our trusted partner across three concurrent Dubai sites.',
+    text: 'Consistent delivery, professional operators, zero delays. Heavy Rentals is our trusted partner across three concurrent Dubai sites.',
     author: 'Nikos P.',
     role: 'Project Director',
     date: 'March 2026',
@@ -191,7 +191,7 @@ export const CONTACTS = [
     title: 'Head Office',
     address: 'Warehouse 7, Al Quoz Industrial Area 3, Dubai, UAE',
     phone: '+971 4 362 8000',
-    email: 'info@stroika.ae',
+    email: 'info@heavyrentals.ae',
   },
   {
     title: 'Operations',
@@ -201,9 +201,9 @@ export const CONTACTS = [
   {
     title: 'Quick Connect',
     socials: [
-      { platform: 'Facebook', url: 'https://facebook.com/stroikacy' },
-      { platform: 'Instagram', url: 'https://instagram.com/stroikacy' },
-      { platform: 'X', url: 'https://x.com/stroikacy' },
+      { platform: 'Facebook', url: 'https://facebook.com/heavyrentals' },
+      { platform: 'Instagram', url: 'https://instagram.com/heavyrentals' },
+      { platform: 'X', url: 'https://x.com/heavyrentals' },
     ],
   },
 ];
@@ -314,9 +314,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Mountain',
     href: '/solutions/land-grading',
     image: '/images/solutions/hf_20260329_154433_bd8b8e69-9718-4293-ae86-07589ffbd120.webp',
-    seoTitle: 'Land Grading & Site Preparation Dubai — Stroika',
+    seoTitle: 'Land Grading & Site Preparation Dubai — Heavy Rentals',
     seoDescription: 'Professional land grading, site clearing, leveling, and soil compaction across Dubai. Laser grading, earth moving, and terrain preparation with modern CAT and JCB equipment.',
-    longDescription: 'Stroika delivers end-to-end site preparation services across Dubai. From initial land clearing and debris removal to precision laser grading and heavy-duty soil compaction, we deploy the right machines and operators for every terrain. Our fleet of bulldozers, graders, rollers, and skid steers ensures your site is construction-ready on schedule — whether it is a 500 m² villa plot in Sharjah or a 50,000 m² commercial development in Dubai.',
+    longDescription: 'Heavy Rentals delivers end-to-end site preparation services across Dubai. From initial land clearing and debris removal to precision laser grading and heavy-duty soil compaction, we deploy the right machines and operators for every terrain. Our fleet of bulldozers, graders, rollers, and skid steers ensures your site is construction-ready on schedule — whether it is a 500 m² villa plot in Sharjah or a 50,000 m² commercial development in Dubai.',
     benefits: [
       'Precision laser grading for level foundations',
       'Full debris removal and site cleanup',
@@ -347,7 +347,7 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Shovel',
     href: '/solutions/excavation',
     image: '/images/solutions/hf_20260329_155121_c1b4a0bf-14eb-4bf4-92ed-2da0069bd3a6.webp',
-    seoTitle: 'Excavation Services Dubai — Deep, Basement & Pool Excavation — Stroika',
+    seoTitle: 'Excavation Services Dubai — Deep, Basement & Pool Excavation — Heavy Rentals',
     seoDescription: 'Professional excavation services in Dubai: deep foundations, basements, pools, shoring, backfilling. 6-step managed process with modern excavators and certified operators.',
     longDescription: 'Our excavation division handles everything from compact residential digs to large-scale commercial foundation work. We follow a proven 6-step process — Site Survey, Planning & Permits, Site Clearing, The Dig, Load & Disposal, and Final Grading — ensuring every project is completed safely, on time, and within budget. With mini, medium, and large excavators in our fleet, we match the right machine to your site conditions and access constraints.',
     benefits: [
@@ -382,9 +382,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'CraneTower',
     href: '/solutions/crane-lifting',
     image: '/images/solutions/hf_20260329_155139_5538f2ab-f0a3-492c-88f7-952ba6614bfd.webp',
-    seoTitle: 'Crane & Lifting Services Dubai — Mobile, Crawler & Tower Cranes — Stroika',
+    seoTitle: 'Crane & Lifting Services Dubai — Mobile, Crawler & Tower Cranes — Heavy Rentals',
     seoDescription: 'Crane rental and lifting services in Dubai. Spider cranes to 300t crawlers. Boom lifts, scissor lifts, telehandlers. Certified operators, slinging, rigging, and lift planning.',
-    longDescription: 'Stroika provides a complete range of lifting solutions — from compact spider cranes for interior work to 300-tonne crawler cranes for heavy infrastructure. Every lift is planned by our engineering team, executed by certified operators, and backed by full insurance. Whether you need a scissor lift for a weekend fit-out or a tower crane for a 12-month high-rise project, we deliver the right equipment with rigging and slinging support.',
+    longDescription: 'Heavy Rentals provides a complete range of lifting solutions — from compact spider cranes for interior work to 300-tonne crawler cranes for heavy infrastructure. Every lift is planned by our engineering team, executed by certified operators, and backed by full insurance. Whether you need a scissor lift for a weekend fit-out or a tower crane for a 12-month high-rise project, we deliver the right equipment with rigging and slinging support.',
     benefits: [
       'Full range: 2.8t spider cranes to 300t crawlers',
       'Lift planning and engineering support',
@@ -412,7 +412,7 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Hammer',
     href: '/solutions/demolition',
     image: '/images/solutions/hf_20260329_154748_83e51a05-c9b7-4a51-9b2e-5f253131eae4.webp',
-    seoTitle: 'Demolition Services Dubai — Building, Villa & Pool Demolition — Stroika',
+    seoTitle: 'Demolition Services Dubai — Building, Villa & Pool Demolition — Heavy Rentals',
     seoDescription: 'Professional demolition services in Dubai. Full building demolition, concrete breaking, rebar separation, on-site crushing, debris removal, and complete site cleanup.',
     longDescription: 'Our demolition team handles controlled teardowns of buildings, villas, pools, and infrastructure with precision and safety. We deploy hydraulic breakers, concrete pulverizers, and demolition grapples mounted on our excavator fleet. On-site concrete crushing and rebar separation reduce waste hauling costs, while our dump trucks handle removal and legal debris disposal. Every project concludes with thorough site cleanup and waste sorting.',
     benefits: [
@@ -445,9 +445,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Waves',
     href: '/solutions/swimming-pool-excavation',
     image: '/images/solutions/hf_20260329_155128_93ed9ba6-f0f8-4e8b-8ea3-5b3d1e1fc5cb.webp',
-    seoTitle: 'Swimming Pool Excavation Dubai — Stroika',
+    seoTitle: 'Swimming Pool Excavation Dubai — Heavy Rentals',
     seoDescription: 'Professional swimming pool excavation in Dubai. Precise dig-outs for any pool shape and size with modern excavators. Residential and commercial pool construction support.',
-    longDescription: 'Stroika provides specialized pool excavation services tailored to the rocky and clay-heavy terrain common across Dubai. Our operators use GPS-guided excavators to achieve precise dimensions for any pool design, from compact plunge pools to full Olympic-spec installations. We handle access logistics, soil removal, and backfilling so your pool contractor can begin forming without delay.',
+    longDescription: 'Heavy Rentals provides specialized pool excavation services tailored to the rocky and clay-heavy terrain common across Dubai. Our operators use GPS-guided excavators to achieve precise dimensions for any pool design, from compact plunge pools to full Olympic-spec installations. We handle access logistics, soil removal, and backfilling so your pool contractor can begin forming without delay.',
     benefits: [
       'Precision GPS-guided excavation for exact pool dimensions',
       'Experience with Dubai rocky and clay terrain',
@@ -475,7 +475,7 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Pickaxe',
     href: '/solutions/trenching',
     image: '/images/solutions/hf_20260329_154417_d7f7c782-d322-423f-a587-bc0d1a8d774f.webp',
-    seoTitle: 'Trenching Services Dubai — Utility & Drainage Trenching — Stroika',
+    seoTitle: 'Trenching Services Dubai — Utility & Drainage Trenching — Heavy Rentals',
     seoDescription: 'Expert trenching services in Dubai for utilities, drainage, irrigation, and foundations. Safe, efficient trench excavation with modern equipment and certified operators.',
     longDescription: 'Our trenching services cover utility installations, drainage systems, irrigation lines, and foundation footings across Dubai. We deploy chain trenchers, excavators with narrow buckets, and vacuum excavation equipment to cut clean trenches in any soil condition. Every trench is executed with full utility detection to prevent damage to existing underground infrastructure.',
     benefits: [
@@ -505,9 +505,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Layers',
     href: '/solutions/site-preparation-earthworks',
     image: '/images/solutions/hf_20260329_155316_9ad2341b-0c02-4a94-8eed-86388d3b859b.webp',
-    seoTitle: 'Site Preparation & Earthworks Dubai — Stroika',
+    seoTitle: 'Site Preparation & Earthworks Dubai — Heavy Rentals',
     seoDescription: 'Full-service site preparation and earthworks in Dubai. Cut and fill, bulk excavation, grading, and compaction for residential, commercial, and infrastructure projects.',
-    longDescription: 'Stroika delivers large-scale earthworks and site preparation packages for developments across Dubai. From initial topsoil stripping and bulk cut-and-fill operations to final compaction and proof rolling, our fleet of dozers, excavators, and graders transforms raw land into construction-ready platforms. We manage volumetric surveys and material balance to minimize off-site disposal costs.',
+    longDescription: 'Heavy Rentals delivers large-scale earthworks and site preparation packages for developments across Dubai. From initial topsoil stripping and bulk cut-and-fill operations to final compaction and proof rolling, our fleet of dozers, excavators, and graders transforms raw land into construction-ready platforms. We manage volumetric surveys and material balance to minimize off-site disposal costs.',
     benefits: [
       'Cut-and-fill optimization to reduce material costs',
       'Volumetric survey and material balance reporting',
@@ -536,7 +536,7 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Truck',
     href: '/solutions/loading-debris-removal',
     image: '/images/solutions/hf_20260329_154428_86b4cd3f-95a8-4c91-82fe-63b867785330.webp',
-    seoTitle: 'Loading & Debris Removal Services Dubai — Stroika',
+    seoTitle: 'Loading & Debris Removal Services Dubai — Heavy Rentals',
     seoDescription: 'Professional loading and debris removal in Dubai. Fast clearance of construction waste, excavated soil, and demolition materials with dump trucks and wheel loaders.',
     longDescription: 'Our loading and debris removal service clears your site quickly and legally. We deploy wheel loaders and excavators for efficient loading, paired with our dump truck fleet for rapid hauling to licensed disposal facilities across Dubai. Whether you need a one-off cleanup or ongoing debris management throughout a project, we scale our resources to match your schedule.',
     benefits: [
@@ -566,9 +566,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Weight',
     href: '/solutions/compaction-services',
     image: '/images/solutions/hf_20260329_154438_18528dc8-5bf8-4a97-a7a4-8ab6ba219004.webp',
-    seoTitle: 'Compaction Services Dubai — Soil & Subgrade Compaction — Stroika',
+    seoTitle: 'Compaction Services Dubai — Soil & Subgrade Compaction — Heavy Rentals',
     seoDescription: 'Professional compaction services in Dubai. Soil compaction, subgrade preparation, and proof rolling with modern rollers and compactors. Meets all engineering specifications.',
-    longDescription: 'Proper compaction is critical for foundations, roads, and infrastructure in Dubai. Stroika provides compaction services using vibratory rollers, plate compactors, and trench rollers to achieve the required density for any specification. We perform nuclear density testing and proof rolling to verify results and provide documentation for structural engineers and municipal inspections.',
+    longDescription: 'Proper compaction is critical for foundations, roads, and infrastructure in Dubai. Heavy Rentals provides compaction services using vibratory rollers, plate compactors, and trench rollers to achieve the required density for any specification. We perform nuclear density testing and proof rolling to verify results and provide documentation for structural engineers and municipal inspections.',
     benefits: [
       'Density testing and documentation provided',
       'Vibratory and static roller options',
@@ -597,9 +597,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Layers',
     href: '/solutions/piling-deep-foundation',
     image: '/images/solutions/hf_20260329_154938_a74ce271-ccc3-49ea-a5fe-99c40bd4ff4b.webp',
-    seoTitle: 'Piling & Deep Foundation Services Dubai — Stroika',
+    seoTitle: 'Piling & Deep Foundation Services Dubai — Heavy Rentals',
     seoDescription: 'Piling and deep foundation services in Dubai. Driven piles, bored piles, CFA piles, and sheet piling with heavy-duty rigs. Expert operators for high-rise and infrastructure projects.',
-    longDescription: 'Stroika operates heavy-duty piling rigs capable of drilling to 60m depth for high-rise towers, bridges, and infrastructure across Dubai. We provide CFA piling, rotary bored piling, driven piling, and sheet piling solutions. Our engineering team works with your structural consultants to select the right piling method for the site geology and load requirements.',
+    longDescription: 'Heavy Rentals operates heavy-duty piling rigs capable of drilling to 60m depth for high-rise towers, bridges, and infrastructure across Dubai. We provide CFA piling, rotary bored piling, driven piling, and sheet piling solutions. Our engineering team works with your structural consultants to select the right piling method for the site geology and load requirements.',
     benefits: [
       'Drilling capability to 60m depth',
       'CFA, rotary bored, driven, and sheet piling options',
@@ -628,9 +628,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'TreePine',
     href: '/solutions/landscaping-finishing',
     image: '/images/solutions/hf_20260329_154941_fb7d3acb-623d-486b-b1e2-7cc39227de7f.webp',
-    seoTitle: 'Landscaping & Finishing Works Dubai — Stroika',
+    seoTitle: 'Landscaping & Finishing Works Dubai — Heavy Rentals',
     seoDescription: 'Professional landscaping and site finishing in Dubai. Topsoil spreading, grading, tree planting, hardscaping, and irrigation preparation for residential and commercial projects.',
-    longDescription: 'After the heavy construction phase, Stroika completes the picture with professional landscaping and site finishing. We spread and grade topsoil, prepare irrigation channels, plant mature trees including olives and palms, and shape terrain for drainage and aesthetics. Our mini excavators and skid steers handle precision grading in tight residential gardens and expansive commercial landscapes alike.',
+    longDescription: 'After the heavy construction phase, Heavy Rentals completes the picture with professional landscaping and site finishing. We spread and grade topsoil, prepare irrigation channels, plant mature trees including olives and palms, and shape terrain for drainage and aesthetics. Our mini excavators and skid steers handle precision grading in tight residential gardens and expansive commercial landscapes alike.',
     benefits: [
       'Topsoil supply, spreading, and fine grading',
       'Mature tree and olive tree planting',
@@ -658,9 +658,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Trash2',
     href: '/solutions/pool-removal',
     image: '/images/solutions/hf_20260329_154603_855f5dd7-06b1-42a2-9402-be440d8eedc5.webp',
-    seoTitle: 'Pool Removal Services Dubai — Stroika',
+    seoTitle: 'Pool Removal Services Dubai — Heavy Rentals',
     seoDescription: 'Swimming pool removal and demolition in Dubai. Full pool teardown, concrete breaking, backfilling, and site restoration. Professional, safe, and fully permitted.',
-    longDescription: 'Stroika handles complete pool removal projects, from draining and demolition to backfilling and surface restoration. Our team breaks down concrete shells, removes rebar, hauls away all debris, and backfills with compacted engineered fill. We restore the area to a buildable or landscapable condition, ready for your next use of the space.',
+    longDescription: 'Heavy Rentals handles complete pool removal projects, from draining and demolition to backfilling and surface restoration. Our team breaks down concrete shells, removes rebar, hauls away all debris, and backfills with compacted engineered fill. We restore the area to a buildable or landscapable condition, ready for your next use of the space.',
     benefits: [
       'Full demolition of concrete pool shells',
       'Rebar separation and recycling',
@@ -688,9 +688,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Truck',
     href: '/solutions/muck-away-debris-removal',
     image: '/images/solutions/hf_20260329_154946_e96e3a3b-d2dc-4572-871a-1b6bf209023e.webp',
-    seoTitle: 'Muck Away & Spoil Removal Dubai — Stroika',
+    seoTitle: 'Muck Away & Spoil Removal Dubai — Heavy Rentals',
     seoDescription: 'Fast muck away and spoil removal services in Dubai. Bulk earth, clay, and construction spoil hauled to licensed tips. Reliable dump truck fleet for any volume.',
-    longDescription: 'When your excavation generates large volumes of spoil, Stroika provides rapid muck away services to keep your site moving. Our dump truck fleet operates continuous rotations between your site and licensed disposal facilities, ensuring excavated material is removed as fast as it is dug. We handle all tipping fees, disposal documentation, and route logistics.',
+    longDescription: 'When your excavation generates large volumes of spoil, Heavy Rentals provides rapid muck away services to keep your site moving. Our dump truck fleet operates continuous rotations between your site and licensed disposal facilities, ensuring excavated material is removed as fast as it is dug. We handle all tipping fees, disposal documentation, and route logistics.',
     benefits: [
       'Continuous truck rotations for zero waiting',
       'Licensed disposal at approved tip sites',
@@ -718,9 +718,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Target',
     href: '/solutions/precision-auger-drilling',
     image: '/images/solutions/hf_20260329_154622_6169f32e-9f31-4b4b-ba58-0a135d3c2f8c.webp',
-    seoTitle: 'Precision Auger Drilling Services Dubai — Stroika',
+    seoTitle: 'Precision Auger Drilling Services Dubai — Heavy Rentals',
     seoDescription: 'Precision auger drilling in Dubai for post holes, foundation piers, ground anchors, and fence posts. Accurate, fast drilling in all soil types with modern auger equipment.',
-    longDescription: 'Stroika offers precision auger drilling for projects requiring accurately positioned holes in any soil type found across Dubai. From parking shade post holes and fence line foundations to ground anchors and signage bases, our excavator-mounted augers deliver consistent diameter and depth every time. We handle rocky ground conditions common across the UAE with heavy-duty rock auger bits.',
+    longDescription: 'Heavy Rentals offers precision auger drilling for projects requiring accurately positioned holes in any soil type found across Dubai. From parking shade post holes and fence line foundations to ground anchors and signage bases, our excavator-mounted augers deliver consistent diameter and depth every time. We handle rocky ground conditions common across the UAE with heavy-duty rock auger bits.',
     benefits: [
       'Consistent diameter and depth accuracy',
       'Heavy-duty rock auger bits for Dubai terrain',
@@ -748,9 +748,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Package',
     href: '/solutions/on-site-material-handling',
     image: '/images/solutions/hf_20260329_154615_5bf7452f-7e58-436b-ab96-61e098aeeac8.webp',
-    seoTitle: 'On-Site Material Handling Services Dubai — Stroika',
+    seoTitle: 'On-Site Material Handling Services Dubai — Heavy Rentals',
     seoDescription: 'On-site material handling in Dubai. Stockpile management, material relocation, aggregate spreading, and load-out with wheel loaders, forklifts, and telehandlers.',
-    longDescription: 'Keep your construction site running smoothly with Stroika\'s on-site material handling services. Our wheel loaders, forklifts, and telehandlers move aggregates, precast elements, steel, and palletized materials efficiently across your site. We manage stockpiles, feed batch plants, and handle load-out operations so your trades can focus on building.',
+    longDescription: 'Keep your construction site running smoothly with Heavy Rentals\' on-site material handling services. Our wheel loaders, forklifts, and telehandlers move aggregates, precast elements, steel, and palletized materials efficiently across your site. We manage stockpiles, feed batch plants, and handle load-out operations so your trades can focus on building.',
     benefits: [
       'Dedicated material handling operators',
       'Stockpile management and inventory tracking',
@@ -779,9 +779,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Sun',
     href: '/solutions/beach-cleaning',
     image: '/images/solutions/hf_20260329_154755_b435e828-0c52-4394-a856-f0363da858e2.webp',
-    seoTitle: 'Beach Cleaning Services Dubai — Stroika',
+    seoTitle: 'Beach Cleaning Services Dubai — Heavy Rentals',
     seoDescription: 'Professional beach cleaning services in Dubai. Mechanical sand sifting, debris removal, and shoreline maintenance for hotels, resorts, and municipalities.',
-    longDescription: 'Stroika provides beach cleaning services for Dubai hotels, resorts, and municipal beaches. Our compact equipment sifts sand to remove debris, stones, and waste without damaging the beach surface. We offer scheduled maintenance programs or one-off deep cleans for seasonal preparation, ensuring pristine shorelines for guests and residents.',
+    longDescription: 'Heavy Rentals provides beach cleaning services for Dubai hotels, resorts, and municipal beaches. Our compact equipment sifts sand to remove debris, stones, and waste without damaging the beach surface. We offer scheduled maintenance programs or one-off deep cleans for seasonal preparation, ensuring pristine shorelines for guests and residents.',
     benefits: [
       'Mechanical sand sifting removes debris without damage',
       'Scheduled maintenance or one-off deep cleans',
@@ -809,9 +809,9 @@ export const SOLUTIONS: Solution[] = [
     icon: 'Brush',
     href: '/solutions/road-site-sweeping',
     image: '/images/solutions/hf_20260329_154743_b52e664d-f486-4028-9be2-0b8d1cfa1b0d.webp',
-    seoTitle: 'Road & Site Sweeping Services Dubai — Stroika',
+    seoTitle: 'Road & Site Sweeping Services Dubai — Heavy Rentals',
     seoDescription: 'Professional road and construction site sweeping in Dubai. Mechanical sweepers for dust control, debris cleanup, and municipal compliance on active construction sites.',
-    longDescription: 'Keep your site compliant and your roads clean with Stroika\'s sweeping services. Our mechanical sweepers handle construction dust, mud tracking, and loose debris on public roads and active sites. Regular sweeping prevents municipal fines, reduces dust complaints, and maintains safe driving conditions around your project perimeter.',
+    longDescription: 'Keep your site compliant and your roads clean with Heavy Rentals\' sweeping services. Our mechanical sweepers handle construction dust, mud tracking, and loose debris on public roads and active sites. Regular sweeping prevents municipal fines, reduces dust complaints, and maintains safe driving conditions around your project perimeter.',
     benefits: [
       'Prevents municipal fines for road contamination',
       'Reduces dust and improves air quality',
@@ -868,9 +868,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'UserCheck',
     href: '/services/operators',
     image: '/images/services/operators.webp',
-    seoTitle: 'Certified Equipment Operator Hire Dubai — Stroika',
+    seoTitle: 'Certified Equipment Operator Hire Dubai — Heavy Rentals',
     seoDescription: 'Hire certified, insured heavy equipment operators in Dubai. Licensed, experienced with CAT, JCB, Liebherr machinery. Provided with every rental or standalone hire.',
-    longDescription: 'Every Stroika rental comes with the option of a qualified, certified operator who knows the machine inside out. Our operators hold valid Dubai licenses, carry individual insurance, and are trained on safety protocols specific to Dubai construction sites. Whether you need a skilled excavator operator for a two-day dig or a crane operator for a multi-month project, we match the right professional to your equipment and scope.',
+    longDescription: 'Every Heavy Rentals rental comes with the option of a qualified, certified operator who knows the machine inside out. Our operators hold valid Dubai licenses, carry individual insurance, and are trained on safety protocols specific to Dubai construction sites. Whether you need a skilled excavator operator for a two-day dig or a crane operator for a multi-month project, we match the right professional to your equipment and scope.',
     benefits: [
       'All operators hold valid Dubai heavy equipment licenses',
       'Individual liability insurance included',
@@ -888,7 +888,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Puzzle',
     href: '/services/attachments',
     image: '/images/services/attachments.webp',
-    seoTitle: 'Excavator & Loader Attachment Rental Dubai — Stroika',
+    seoTitle: 'Excavator & Loader Attachment Rental Dubai — Heavy Rentals',
     seoDescription: 'Rent hydraulic breakers, augers, grapples, buckets, and forks in Dubai. Compatible with CAT, JCB, Bobcat excavators and loaders. Quick-coupler ready.',
     longDescription: 'Maximize the versatility of your rented equipment with our comprehensive attachment inventory. From hydraulic breakers for demolition to precision augers for drilling, every attachment is maintained to OEM standards and fitted with quick-coupler mounts for fast changeover on site. We stock attachments compatible with all major excavator and loader brands in our fleet.',
     benefits: [
@@ -907,7 +907,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Fuel',
     href: '/services/fueling',
     image: '/images/services/fueling.webp',
-    seoTitle: 'On-Site Diesel Fueling Service Dubai — Stroika',
+    seoTitle: 'On-Site Diesel Fueling Service Dubai — Heavy Rentals',
     seoDescription: 'On-site diesel fuel delivery for construction equipment in Dubai. Scheduled or on-demand refueling. Zero downtime, GPS-tracked tankers, certified fuel supply.',
     longDescription: 'Our on-site fueling service eliminates the downtime and logistics headaches of sending machines off-site for refueling. GPS-tracked fuel tankers deliver certified diesel directly to your project location on a scheduled or on-demand basis. Each delivery is metered and documented, giving you full transparency on fuel consumption across your fleet.',
     benefits: [
@@ -932,9 +932,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'FileCheck',
     href: '/services/permits',
     image: '/images/services/permits.webp',
-    seoTitle: 'Construction Permits & Heavy Equipment Transport Dubai — Stroika',
-    seoDescription: 'Road transport permits, municipal construction permits, and low-loader logistics in Dubai. End-to-end permit coordination and heavy equipment delivery by Stroika.',
-    longDescription: 'Navigating Dubai\'s permit landscape can slow down any project. Stroika handles the entire process — from road permits for oversized equipment transport to municipal approvals for on-site construction activities. Our logistics team coordinates low-loader scheduling, route planning, police escorts where required, and on-time delivery to your site gate. One call covers everything.',
+    seoTitle: 'Construction Permits & Heavy Equipment Transport Dubai — Heavy Rentals',
+    seoDescription: 'Road transport permits, municipal construction permits, and low-loader logistics in Dubai. End-to-end permit coordination and heavy equipment delivery by Heavy Rentals.',
+    longDescription: 'Navigating Dubai\'s permit landscape can slow down any project. Heavy Rentals handles the entire process — from road permits for oversized equipment transport to municipal approvals for on-site construction activities. Our logistics team coordinates low-loader scheduling, route planning, police escorts where required, and on-time delivery to your site gate. One call covers everything.',
     benefits: [
       'Road permits for oversized loads',
       'Municipal construction permits coordination',
@@ -952,9 +952,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Shovel',
     href: '/fleet?class=heavy',
     image: '/images/services/excavators-rental.webp',
-    seoTitle: 'Excavators Rental Dubai — Heavy & Medium — Stroika',
+    seoTitle: 'Excavators Rental Dubai — Heavy & Medium — Heavy Rentals',
     seoDescription: 'Rent heavy and medium excavators in Dubai. Top brands like CAT, JCB, and Volvo for major earthmoving and foundation projects.',
-    longDescription: 'Stroika provides a top-tier fleet of medium and heavy excavators suitable for bulk earthmoving, deep foundation excavation, and major civil engineering projects. Our units come equipped with advanced GPS and telematics systems to maximize digging precision and operational efficiency. Rentals include full maintenance support and optional certified operator hire.',
+    longDescription: 'Heavy Rentals provides a top-tier fleet of medium and heavy excavators suitable for bulk earthmoving, deep foundation excavation, and major civil engineering projects. Our units come equipped with advanced GPS and telematics systems to maximize digging precision and operational efficiency. Rentals include full maintenance support and optional certified operator hire.',
     benefits: [
       'Late-model CAT, JCB, and Volvo excavators',
       'Advanced GPS digging systems available',
@@ -972,7 +972,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Shovel',
     href: '/fleet?class=light',
     image: '/images/services/mini-excavators-rental.webp',
-    seoTitle: 'Mini Excavators Rental Dubai — Compact Excavators — Stroika',
+    seoTitle: 'Mini Excavators Rental Dubai — Compact Excavators — Heavy Rentals',
     seoDescription: 'Rent mini excavators in Dubai. Perfect for tight residential spaces, landscaping, and light trenching. Bobcat and CAT models available.',
     longDescription: 'Our mini excavators deliver high-performance digging in the most restricted construction spaces. Offering zero tail swing models with rubber tracks to minimize ground disturbance, they are ideal for residential footing excavation, landscaping, and urban utility trenching. These highly maneuverable machines ensure you get the job done quickly without sacrificing power.',
     benefits: [
@@ -992,9 +992,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Target',
     href: '/fleet',
     image: '/images/services/boom-lift-rental.webp',
-    seoTitle: 'Boom Lift Rental Dubai — Aerial Work Platforms — Stroika',
+    seoTitle: 'Boom Lift Rental Dubai — Aerial Work Platforms — Heavy Rentals',
     seoDescription: 'Rent articulating and telescopic boom lifts in Dubai. JLG and Genie aerial platforms for safe high-reach access up to 40 meters.',
-    longDescription: 'Access difficult high-reach areas safely with Stroika\'s versatile boom lift fleet. Whether you need the straight-line reach of a telescopic boom for structural steel erection or the up-and-over capability of an articulating boom for complex facility maintenance, we have the right machine. Our fleet includes both robust diesel models for rough terrain and quiet electric options for indoor use.',
+    longDescription: 'Access difficult high-reach areas safely with Heavy Rentals\' versatile boom lift fleet. Whether you need the straight-line reach of a telescopic boom for structural steel erection or the up-and-over capability of an articulating boom for complex facility maintenance, we have the right machine. Our fleet includes both robust diesel models for rough terrain and quiet electric options for indoor use.',
     benefits: [
       'Articulating and telescopic models available',
       'Indoor electrical and outdoor diesel options',
@@ -1011,7 +1011,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Tractor',
     href: '/fleet?class=light',
     image: '/images/services/bobcat-rental.webp',
-    seoTitle: 'Bobcat Rental Dubai — Compact Skid-Steer Loaders — Stroika',
+    seoTitle: 'Bobcat Rental Dubai — Compact Skid-Steer Loaders — Heavy Rentals',
     seoDescription: 'Rent versatile Bobcat skid-steer loaders in Dubai. Ideal for site cleanup, material moving, and grading with various attachments.',
     longDescription: 'A staple of modern construction, our Bobcat skid-steer loaders provide exceptional maneuverability and versatility. Thanks to a wide array of quick-attach tools like sweeping brooms, pallet forks, and grading buckets, a single Bobcat can handle site cleanup, material loading, and surface preparation. Their compact size makes them the perfect solution for tight urban sites.',
     benefits: [
@@ -1030,7 +1030,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Tractor',
     href: '/fleet?class=light',
     image: '/images/services/skid-steer-rental.webp',
-    seoTitle: 'Skid Steer Rental Dubai — Track & Wheel Loaders — Stroika',
+    seoTitle: 'Skid Steer Rental Dubai — Track & Wheel Loaders — Heavy Rentals',
     seoDescription: 'Rent skid steer loaders in Dubai. Wheeled and tracked CAT and JCB models with high flow hydraulics for demanding heavy attachments.',
     longDescription: 'Maximize your site productivity with our advanced CAT and JCB skid steer loaders. Available in both wheeled models for hard surfaces and tracked options for muddy or uneven terrain, they offer superior traction and stability. Equipped with high-flow auxiliary hydraulics, they can easily run demanding attachments like cold planers or large brush cutters.',
     benefits: [
@@ -1049,9 +1049,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Truck',
     href: '/fleet?class=heavy',
     image: '/images/services/wheel-loader-rental.webp',
-    seoTitle: 'Wheel Loader Rental Dubai — Bulk Material Handling — Stroika',
+    seoTitle: 'Wheel Loader Rental Dubai — Bulk Material Handling — Heavy Rentals',
     seoDescription: 'Rent high-capacity wheel loaders in Dubai. Fast loading and bulk material movement with top brands like CAT and Volvo.',
-    longDescription: 'Move aggregate, soil, and debris faster with Stroika\'s heavy-duty wheel loaders. Perfect for quarry operations, batch plant feeding, or large-scale civil earthworks, these loaders provide unmatched bucket capacities and fast cycle times. Featuring fuel-efficient engines and robust drivetrains, they deliver continuous high production while maintaining excellent stability.',
+    longDescription: 'Move aggregate, soil, and debris faster with Heavy Rentals\' heavy-duty wheel loaders. Perfect for quarry operations, batch plant feeding, or large-scale civil earthworks, these loaders provide unmatched bucket capacities and fast cycle times. Featuring fuel-efficient engines and robust drivetrains, they deliver continuous high production while maintaining excellent stability.',
     benefits: [
       'Huge payload capacity for maximum efficiency',
       'Fast hydraulic cycle times accelerate loading',
@@ -1068,9 +1068,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Layers',
     href: '/fleet?class=heavy',
     image: '/images/services/piling-machine-rental.webp',
-    seoTitle: 'Piling Machine Rental Dubai — Deep Foundation Equipment — Stroika',
+    seoTitle: 'Piling Machine Rental Dubai — Deep Foundation Equipment — Heavy Rentals',
     seoDescription: 'Rent Liebherr piling rigs in Dubai. Heavy-duty equipment for CFA piling, rotary bored piling, and driving sheet piles.',
-    longDescription: 'Secure your heaviest structures with our specialized deep foundation piling rigs. Stroika offers Liebherr piling machines capable of reaching depths of 60 meters and delivering immense torque for tough soil conditions. Our piling rental division supports continuous flight auger (CFA), rotary bored, and driven pile systems, ensuring you have the right technology for your engineered foundations.',
+    longDescription: 'Secure your heaviest structures with our specialized deep foundation piling rigs. Heavy Rentals offers Liebherr piling machines capable of reaching depths of 60 meters and delivering immense torque for tough soil conditions. Our piling rental division supports continuous flight auger (CFA), rotary bored, and driven pile systems, ensuring you have the right technology for your engineered foundations.',
     benefits: [
       'Top-tier Liebherr equipment for maximum reliability',
       'Capable of tackling complex high-rise and bridge foundations',
@@ -1087,7 +1087,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Target',
     href: '/fleet?class=light',
     image: '/images/services/manlift-rental.webp',
-    seoTitle: 'Manlift & Scissor Lift Rental Dubai — Elevated Platforms — Stroika',
+    seoTitle: 'Manlift & Scissor Lift Rental Dubai — Elevated Platforms — Heavy Rentals',
     seoDescription: 'Rent scissor lifts and manlifts in Dubai. Secure working platforms for indoor electrical, mechanical, and maintenance tasks.',
     longDescription: 'Ensure safety and efficiency for your elevated indoor and outdoor tasks with our scissor lift and manlift rentals. Providing large, stable platform areas capable of lifting multiple workers and tools, these lifts are essential for HVAC installation, electrical fit-outs, and facade work. Non-marking tires on our electric models make them perfect for finished floors.',
     benefits: [
@@ -1106,9 +1106,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'CraneTower',
     href: '/fleet?class=heavy',
     image: '/images/services/crane-rental.webp',
-    seoTitle: 'Mobile & Crawler Crane Rental Dubai — Heavy Lifting — Stroika',
+    seoTitle: 'Mobile & Crawler Crane Rental Dubai — Heavy Lifting — Heavy Rentals',
     seoDescription: 'Rent Liebherr mobile and crawler cranes in Dubai. Safe, engineered heavy lifting solutions up to 300t, supplied with certified operators.',
-    longDescription: 'Handle your most demanding vertical and structural lifts with Stroika\'s mobile and crawler crane rentals. Featuring premium Liebherr cranes with capacities ranging up to 300 tonnes, we offer reliable equipment for high-rise material hoisting, precast concrete placement, and industrial machinery installation. Our in-house engineering team provides comprehensive lift planning and compliance documentation.',
+    longDescription: 'Handle your most demanding vertical and structural lifts with Heavy Rentals\' mobile and crawler crane rentals. Featuring premium Liebherr cranes with capacities ranging up to 300 tonnes, we offer reliable equipment for high-rise material hoisting, precast concrete placement, and industrial machinery installation. Our in-house engineering team provides comprehensive lift planning and compliance documentation.',
     benefits: [
       'Diverse crane fleet ranging from fast mobile up to heavy crawler units',
       'In-house engineering support for detailed lift planning',
@@ -1125,7 +1125,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Target',
     href: '/fleet?class=light',
     image: '/images/services/spider-crane-rental.webp',
-    seoTitle: 'Spider Crane Rental Dubai — Compact Indoor Cranes — Stroika',
+    seoTitle: 'Spider Crane Rental Dubai — Compact Indoor Cranes — Heavy Rentals',
     seoDescription: 'Rent Maeda spider cranes in Dubai. Perfect for indoor lifting, glass installation, and restricted access areas.',
     longDescription: 'When space is at a premium, our mini spider cranes deliver exceptional lifting power in the smallest footprints. Maeda spider cranes are designed to track through standard double doors or navigate narrow alleys, then deploy stabilizing outriggers to safely hoist up to 2.8 tonnes. They are the go-to solution for indoor plant installation, rooftop lifting, and heavy glazing projects.',
     benefits: [
@@ -1144,7 +1144,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Truck',
     href: '/fleet?class=heavy',
     image: '/images/services/dump-truck.webp',
-    seoTitle: 'Dump Truck Rental Dubai — Earthmoving & Hauling — Stroika',
+    seoTitle: 'Dump Truck Rental Dubai — Earthmoving & Hauling — Heavy Rentals',
     seoDescription: 'Rent heavy-duty dump trucks in Dubai. Scania and Volvo articulated haulers for mass earthmoving and off-road muck away applications.',
     longDescription: 'Transport bulk material quickly and efficiently with our fleet of high-capacity dump trucks. We provide rigid road-going trucks for clean highway transport and rugged 6x6 articulated haulers for severe off-road conditions. With payloads up to 39 tonnes, our trucks ensure that your excavation spoil is removed rapidly, keeping your earthmoving projects running on schedule.',
     benefits: [
@@ -1163,9 +1163,9 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'Package',
     href: '/fleet?class=light',
     image: '/images/services/wheel-loader-rental.webp',
-    seoTitle: 'Forklift Rental Dubai — Industrial & Rough Terrain — Stroika',
+    seoTitle: 'Forklift Rental Dubai — Industrial & Rough Terrain — Heavy Rentals',
     seoDescription: 'Rent forklifts in Dubai. Electric industrial forklifts for warehousing and diesel rough terrain models for active construction sites.',
-    longDescription: 'Streamline your material logistics with Stroika\'s robust forklift rentals. Moving palletized goods, steel works, or block packs requires dependable lifting equipment. We supply specialized rough-terrain forklifts with heavy-duty tires and high ground clearance for muddy construction sites, alongside zero-emission electric forklifts specifically optimized for indoor warehousing or basement tasks.',
+    longDescription: 'Streamline your material logistics with Heavy Rentals\' robust forklift rentals. Moving palletized goods, steel works, or block packs requires dependable lifting equipment. We supply specialized rough-terrain forklifts with heavy-duty tires and high ground clearance for muddy construction sites, alongside zero-emission electric forklifts specifically optimized for indoor warehousing or basement tasks.',
     benefits: [
       'Rough terrain models navigate rutted and muddy sites with ease',
       'High mast options for elevated material stacking',
@@ -1182,7 +1182,7 @@ export const SERVICES_PRIMARY: Service[] = [
     icon: 'ArrowUpRight',
     href: '/fleet?class=medium',
     image: '/images/services/telehandler-rental.webp',
-    seoTitle: 'Telehandler Rental Dubai — Telescopic Handlers — Stroika',
+    seoTitle: 'Telehandler Rental Dubai — Telescopic Handlers — Heavy Rentals',
     seoDescription: 'Rent JCB telehandlers in Dubai. 17m reach capabilities with 4-wheel steering to elevate materials and navigate crowded construction sites.',
     longDescription: 'The ultimate utility machine for any active construction site, our JCB telehandlers seamlessly blend lifting height with rough-terrain mobility. Featuring 4-wheel steering for crab-walking around obstacles and a telescopic boom capable of reaching up to 17 meters, these machines can safely lift block pallets to third-story scaffolding or feed material directly through window openings.',
     benefits: [
