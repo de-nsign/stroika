@@ -65,7 +65,7 @@ export const KEY_ASSETS = {
       subtitle: 'Excavators to Graders',
       description:
         'Excavators, dozers, wheel loaders, mining trucks, motor graders, skid steers, compactors and backhoe loaders.',
-      image: '/images/equipment/gl-excavator.webp',
+      image: '/images/main/light.webp',
       href: '/fleet?class=earthmoving',
     },
     {
@@ -73,7 +73,7 @@ export const KEY_ASSETS = {
       subtitle: 'Working at Height',
       description:
         'Boom lifts, spider lifts, scissor lifts, truck-mounted platforms and vertical mast lifts for indoor and outdoor work.',
-      image: '/images/equipment/gl-boom-lift.webp',
+      image: '/images/services/boom-lift-rental.webp',
       href: '/fleet?class=access',
     },
     {
@@ -81,7 +81,7 @@ export const KEY_ASSETS = {
       subtitle: 'Cranes, Compressors, Gensets',
       description:
         'Mobile, rough-terrain and crawler cranes, forklifts and duct lifters, plus air compressors and diesel generators.',
-      image: '/images/equipment/gl-crawler-crane.webp',
+      image: '/images/services/crane-rental.webp',
       href: '/fleet?class=lifting',
     },
   ],
