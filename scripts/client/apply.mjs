@@ -128,9 +128,11 @@ async function run() {
 
   const map = site.map;
   if (map) {
-    const query = map.lat && map.lng ? `${map.lat},${map.lng}` : (map.query ?? site.address ?? '');
-    /* Google's embed wants a literal comma between lat and lng — %2C renders a
-       blank tile. Encode everything else, restore the commas. */
+    /* The legacy maps?q= embed renders a blank tile for a bare "lat,lng" pair.
+       A place query works, and coordinates work only with the loc: prefix — so
+       prefer the address and fall back to loc:. Commas must stay literal. */
+    const query =
+      map.query ?? site.address ?? (map.lat && map.lng ? `loc:${map.lat},${map.lng}` : '');
     const src = `https://maps.google.com/maps?q=${encodeURIComponent(query).replace(/%2C/g, ',')}&t=&z=${map.zoom ?? 15}&ie=UTF8&iwloc=&output=embed`;
     patch('src/app/contacts/page.tsx', 'map embed', /src="https:\/\/maps\.google\.com\/maps\?q=[^"]*"/, `src="${src}"`);
     patch('src/app/contacts/page.tsx', 'map title', /title="[^"]*office location"/, `title="${site.name} office location"`);
