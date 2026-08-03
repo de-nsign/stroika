@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { SITE, NAV_LINKS } from '@/lib/constants';
 import { fadeIn } from '@/lib/animations';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -16,9 +17,8 @@ export default function Footer() {
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <Link href="/" className="flex items-center gap-3">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo.svg" alt={SITE.name} className="h-6 w-auto brightness-0" />
+          <Link href="/" aria-label={SITE.name} className="flex items-center gap-3">
+            <Logo className="h-6" />
           </Link>
           <div className="flex flex-wrap justify-center gap-6">
             {NAV_LINKS.map((link) => (

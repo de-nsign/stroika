@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { SITE, NAV_LINKS } from '@/lib/constants';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,13 +27,8 @@ export default function Navbar() {
       {/* Cover area above navbar for iOS in-app browsers (mobile only, on scroll) */}
       {scrolled && <div className="pointer-events-none absolute inset-x-0 bottom-full h-[500px] bg-white md:hidden" />}
       {/* Logo */}
-      <Link href="/" className="font-display text-lg font-bold">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/logo.svg"
-          alt={SITE.name}
-          className="h-7 w-auto brightness-0"
-        />
+      <Link href="/" aria-label={SITE.name}>
+        <Logo className="h-7" />
       </Link>
 
       {/* Center pill — desktop only */}
