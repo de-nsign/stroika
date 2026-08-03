@@ -63,7 +63,7 @@ export default function EquipmentPageClient({ item, otherEquipment }: Props) {
             >
               <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[3/2]">
                 <div
-                  className="h-full w-full bg-cover bg-center bg-no-repeat"
+                  className="h-full w-full bg-contain bg-center bg-no-repeat p-4"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 />
                 {/* Tags */}
@@ -190,7 +190,7 @@ export default function EquipmentPageClient({ item, otherEquipment }: Props) {
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <div
-                        className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full bg-contain bg-center bg-no-repeat p-4 transition-transform duration-500 group-hover:scale-105"
                         style={{ backgroundImage: `url('${eq.image}')` }}
                       />
                       {eq.tags.length > 0 && (

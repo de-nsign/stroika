@@ -105,8 +105,12 @@ is the fastest way to make the build look cheap:
 
 | Slot | What belongs there |
 |---|---|
-| `main/hero`, `main/mission`, `project-*` | full-bleed **photography** |
-| `fleet/*`, `main/light‑medium‑heavy`, `PAGE_HEROES[*].image` | **transparent cut-outs**, no background |
+| `main/hero`, `project-*`, gallery | full-bleed **photography** |
+| `main/mission`, `fleet/*`, `main/light‑medium‑heavy`, `PAGE_HEROES[*].image` | **transparent cut-outs**, no background |
+
+`main/mission` is the trap: it sits on a full-bleed orange band and is rendered
+`bg-contain`, so a rectangular photo shows up as a framed picture floating on
+orange. It takes a cut-out, like the rest of that column.
 
 The template's inner-page heroes are floating objects on transparent
 backgrounds, never rectangular photos parked in the top-right corner. Look at

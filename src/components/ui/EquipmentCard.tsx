@@ -24,7 +24,9 @@ export default function EquipmentCard({ item }: { item: Equipment }) {
         {/* Photo */}
         <div className="relative aspect-[4/3] overflow-hidden bg-primary-50">
           <div
-            className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+            /* contain, not cover: equipment shots are cut-outs, and cover crops
+               the machine's boom and wheels off at the card edges */
+            className="h-full w-full bg-contain bg-center bg-no-repeat p-4 transition-transform duration-500 group-hover:scale-105"
             style={{ backgroundImage: `url('${item.image}')` }}
           />
           {/* Tags */}
