@@ -147,14 +147,14 @@ export default function ContactsPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <div className="relative h-[400px] overflow-hidden rounded-[24px]">
             <iframe
-              src="https://maps.google.com/maps?q=Al%20Quoz%20Industrial%20Second,%20Al%20Quoz,%20Dubai,%20United%20Arab%20Emirates&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(SITE.address).replace(/%2C/g, ',')}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Al Badar Mobile Crane office location"
+              title={`${SITE.name} office location`}
             />
             <div className="pointer-events-none absolute inset-0 rounded-[24px] ring-1 ring-inset ring-black/5" />
           </div>
