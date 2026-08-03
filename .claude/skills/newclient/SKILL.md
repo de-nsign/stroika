@@ -112,6 +112,23 @@ is the fastest way to make the build look cheap:
 `bg-contain`, so a rectangular photo shows up as a framed picture floating on
 orange. It takes a cut-out, like the rest of that column.
 
+**Size decides the source.** A cut-out made from a scraped JPEG holds up at card
+size and falls apart when the slot renders it 800px wide — ragged mask edges,
+white residue caught in lattice work, visible jaggies. So:
+
+- **Large slots** (`main/mission`, `PAGE_HEROES[*].image`) → use the template's
+  own 3D renders from `public/images/services/` and `public/images/equipment/`.
+  They are clean vector-grade artwork at 2048px and they are already the right
+  orange. `git ls-tree -r main --name-only public/images/` to see the catalogue;
+  a crane company gets `services/crane-rental.webp`, and there are equivalents
+  for excavators, loaders, lifts and telehandlers.
+- **Card-size slots** (`fleet/*`, `main/light‑medium‑heavy`) → the client's own
+  cut-out machines. Small enough that the mask holds, and specific enough that
+  the client recognises their kit.
+
+Before shipping, view every large slot at full size, not just in the page
+screenshot. That is where a bad mask shows.
+
 The template's inner-page heroes are floating objects on transparent
 backgrounds, never rectangular photos parked in the top-right corner. Look at
 `git show main:public/images/solutions/hero.webp` if you need the reference.

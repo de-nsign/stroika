@@ -44,7 +44,7 @@ export const PAGE_HEROES = {
     subtitle:
       'Eight standard crane classes from 25 to 250 tonnes, with capacity to 700 tonnes on request — all maintained and ready to mobilise across Dubai.',
     breadcrumb: 'Cranes',
-    image: '/images/fleet/crane-250t.webp',
+    image: '/images/services/crane-rental.webp',
   },
   solutions: {
     title: 'Lifting Solutions',
