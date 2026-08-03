@@ -1,22 +1,17 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
-import InnerHero from '@/components/layout/InnerHero';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { SERVICES_PRIMARY, SITE } from '@/lib/constants';
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import InnerHero from "@/components/layout/InnerHero";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { SERVICES_PRIMARY, SITE, PAGE_HEROES } from "@/lib/constants";
 
 export default function ServicesPage() {
   return (
     <main>
-      <InnerHero
-        title="Value-Added Services"
-        subtitle="Beyond equipment rental — certified operators, logistics, and support to keep your project moving."
-        breadcrumb="Services"
-        image="/images/services/hero.webp"
-      />
+      <InnerHero {...PAGE_HEROES.services} />
 
       {/* Primary services — horizontal cards in 2-col grid */}
       <section className="bg-white pt-12 pb-20 lg:pt-16 lg:pb-28">
@@ -66,8 +61,6 @@ export default function ServicesPage() {
           </div>
         </motion.div>
       </section>
-
-
 
       {/* CTA */}
       <section className="bg-primary py-20 lg:py-28">

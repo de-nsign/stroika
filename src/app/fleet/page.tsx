@@ -1,30 +1,34 @@
-'use client';
+"use client";
 
-import { Suspense, useState, useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { PackageOpen } from 'lucide-react';
-import InnerHero from '@/components/layout/InnerHero';
-import FilterBar from '@/components/ui/FilterBar';
-import EquipmentCard from '@/components/ui/EquipmentCard';
-import { staggerContainer } from '@/lib/animations';
+import { Suspense, useState, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
+import { PackageOpen } from "lucide-react";
+import InnerHero from "@/components/layout/InnerHero";
+import FilterBar from "@/components/ui/FilterBar";
+import EquipmentCard from "@/components/ui/EquipmentCard";
+import { staggerContainer } from "@/lib/animations";
 import {
   FLEET,
   type WeightClass,
   type EquipmentType,
-} from '@/lib/constants';
+  PAGE_HEROES,
+} from "@/lib/constants";
 
 function FleetContent() {
   const searchParams = useSearchParams();
-  const initialClass = (searchParams.get('class') as WeightClass) || 'all';
+  const initialClass = (searchParams.get("class") as WeightClass) || "all";
 
-  const [activeClass, setActiveClass] = useState<WeightClass | 'all'>(initialClass);
-  const [activeType, setActiveType] = useState<EquipmentType | 'all'>('all');
+  const [activeClass, setActiveClass] = useState<WeightClass | "all">(
+    initialClass,
+  );
+  const [activeType, setActiveType] = useState<EquipmentType | "all">("all");
 
   const filtered = useMemo(() => {
     return FLEET.filter((item) => {
-      if (activeClass !== 'all' && item.weightClass !== activeClass) return false;
-      if (activeType !== 'all' && item.type !== activeType) return false;
+      if (activeClass !== "all" && item.weightClass !== activeClass)
+        return false;
+      if (activeType !== "all" && item.type !== activeType) return false;
       return true;
     });
   }, [activeClass, activeType]);
@@ -76,16 +80,17 @@ function FleetContent() {
 export default function FleetPage() {
   return (
     <main>
-      <InnerHero
-        title="Our Equipment"
-        subtitle="27+ machines from world-class brands — modern, maintained, and ready to deploy across Dubai."
-        breadcrumb="Equipment"
-        image="/images/fleet/hf_20260330_071733_cff68166-e762-4167-8917-e35197661f72.webp"
-      />
+      <InnerHero {...PAGE_HEROES.fleet} />
 
       <section className="bg-white py-12 lg:py-20">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
-          <Suspense fallback={<div className="py-20 text-center text-primary-500">Loading equipment...</div>}>
+          <Suspense
+            fallback={
+              <div className="py-20 text-center text-primary-500">
+                Loading equipment...
+              </div>
+            }
+          >
             <FleetContent />
           </Suspense>
         </div>

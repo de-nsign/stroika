@@ -1,26 +1,17 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import {
-  ArrowUpRight,
-} from 'lucide-react';
-import InnerHero from '@/components/layout/InnerHero';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { SOLUTIONS, SITE } from '@/lib/constants';
-
-
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import InnerHero from "@/components/layout/InnerHero";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { SOLUTIONS, SITE, PAGE_HEROES } from "@/lib/constants";
 
 export default function SolutionsPage() {
   return (
     <main>
-      <InnerHero
-        title="Solutions by Job"
-        subtitle="Turnkey site solutions managed by experts — from permits to cleanup."
-        breadcrumb="Solutions"
-        image="/images/solutions/hero.webp"
-      />
+      <InnerHero {...PAGE_HEROES.solutions} />
 
       <section className="bg-white pt-12 pb-20 lg:pt-16 lg:pb-28">
         <motion.div
@@ -89,7 +80,8 @@ export default function SolutionsPage() {
             transition={{ delay: 0.1 }}
             className="mb-8 text-white/80"
           >
-            Let&apos;s talk. We&apos;ll design a package tailored to your project.
+            Let&apos;s talk. We&apos;ll design a package tailored to your
+            project.
           </motion.p>
           <motion.a
             initial={{ opacity: 0, y: 20 }}

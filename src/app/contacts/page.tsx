@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   MapPin,
   Phone,
@@ -8,21 +8,16 @@ import {
   MessageCircle,
   Clock,
   ArrowUpRight,
-} from 'lucide-react';
-import InnerHero from '@/components/layout/InnerHero';
-import QuoteSection from '@/components/sections/QuoteSection';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { SITE } from '@/lib/constants';
+} from "lucide-react";
+import InnerHero from "@/components/layout/InnerHero";
+import QuoteSection from "@/components/sections/QuoteSection";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { SITE, PAGE_HEROES } from "@/lib/constants";
 
 export default function ContactsPage() {
   return (
     <main>
-      <InnerHero
-        title="Get in Touch"
-        subtitle="Our team is ready to help you find the right equipment and services for your project."
-        breadcrumb="Contacts"
-        image="/images/contacts/hero.webp"
-      />
+      <InnerHero {...PAGE_HEROES.contacts} />
 
       {/* Contact grid */}
       <section className="bg-white py-20 lg:py-28">
@@ -33,8 +28,6 @@ export default function ContactsPage() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-
-
           <motion.h2
             variants={fadeInUp}
             className="font-display mb-16 text-center text-3xl font-light text-primary md:text-5xl"
@@ -54,12 +47,14 @@ export default function ContactsPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                  <span className="text-sm text-primary-600">{SITE.address}</span>
+                  <span className="text-sm text-primary-600">
+                    {SITE.address}
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                   <a
-                    href={`tel:${SITE.phone.replace(/\s/g, '')}`}
+                    href={`tel:${SITE.phone.replace(/\s/g, "")}`}
                     className="text-sm text-primary-600 transition-colors hover:text-primary"
                   >
                     {SITE.phone}
@@ -108,7 +103,9 @@ export default function ContactsPage() {
                     <p className="text-xs font-semibold tracking-wider text-primary-500 uppercase">
                       Working Hours
                     </p>
-                    <span className="text-sm text-primary-600">{SITE.hours}</span>
+                    <span className="text-sm text-primary-600">
+                      {SITE.hours}
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -152,7 +149,7 @@ export default function ContactsPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <div className="relative h-[400px] overflow-hidden rounded-[24px]">
             <iframe
-              src="https://maps.google.com/maps?q=Shop%2015,%20G%20Floor,%20Eiffel%20Accommodation%203,%2044%20Street,%20Al%20Quoz%203,%20Dubai,%20UAE&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Star+Power+Equipment+Rental+%26+Repairing+Al+Quoz+Dubai&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
