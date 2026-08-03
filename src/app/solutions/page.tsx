@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import InnerHero from '@/components/layout/InnerHero';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { SOLUTIONS, SITE } from '@/lib/constants';
+import { SOLUTIONS, SITE, PAGE_HEROES } from '@/lib/constants';
 
 
 
@@ -16,8 +16,8 @@ export default function SolutionsPage() {
   return (
     <main>
       <InnerHero
-        title="Solutions by Job"
-        subtitle="Turnkey site solutions managed by experts — from permits to cleanup."
+        title={PAGE_HEROES.solutions.title}
+        subtitle={PAGE_HEROES.solutions.subtitle}
         breadcrumb="Solutions"
         image="/images/solutions/hero.webp"
       />

@@ -1,6 +1,6 @@
 import { SITE } from '@/lib/constants';
 
-/* Brand logo: orange mark + "Heavy Rentals" wordmark.
+/* Brand logo: client mark or wordmark, driven by SITE.logo.
    Rendered as JSX (not an <img>) so the brand name always reflects SITE.name. */
 export default function Logo({
   className = 'h-7',

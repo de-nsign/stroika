@@ -11,8 +11,7 @@ import { staggerContainer } from '@/lib/animations';
 import {
   FLEET,
   type WeightClass,
-  type EquipmentType,
-} from '@/lib/constants';
+  type EquipmentType, PAGE_HEROES } from '@/lib/constants';
 
 function FleetContent() {
   const searchParams = useSearchParams();
@@ -77,8 +76,8 @@ export default function FleetPage() {
   return (
     <main>
       <InnerHero
-        title="Our Equipment"
-        subtitle="27+ machines from world-class brands — modern, maintained, and ready to deploy across Dubai."
+        title={PAGE_HEROES.fleet.title}
+        subtitle={PAGE_HEROES.fleet.subtitle}
         breadcrumb="Equipment"
         image="/images/fleet/hf_20260330_071733_cff68166-e762-4167-8917-e35197661f72.webp"
       />

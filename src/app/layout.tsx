@@ -22,13 +22,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
+  title: 'GrowthLift — Heavy Equipment Rental, Trading & AMC in Dubai',
   description:
-    "Dubai's premier partner for heavy equipment rental and full site solutions. 27+ machines, certified operators, 24/7 support.",
+    'Heavy equipment rental, trading and AMC services from Dubai across the Middle East, Asia and Africa. Earth moving, lifting, access platforms, air and power systems. Genie, JLG, CAT, Komatsu multi-brand support. Rated 5.0 on Google.',
   openGraph: {
-    title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
+    title: 'GrowthLift Heavy Equipments Trading & Rental — Dubai',
     description:
-      "Dubai's premier partner for heavy equipment rental and full site solutions.",
+      'Excavators, cranes, boom and scissor lifts, compressors and generators for rent across the Middle East, Asia and Africa. Short-term, long-term, with or without operator.',
     type: 'website',
   },
 };

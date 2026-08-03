@@ -55,9 +55,11 @@ export default function EquipmentCard({ item }: { item: Equipment }) {
             {item.name}
           </h3>
           <div className="mb-3 flex flex-wrap gap-2">
-            <span className="rounded-full bg-primary-50 px-3 py-1 text-xs text-primary-600">
-              {item.weight}
-            </span>
+            {item.weight && (
+              <span className="rounded-full bg-primary-50 px-3 py-1 text-xs text-primary-600">
+                {item.weight}
+              </span>
+            )}
             {item.specs && (
               <span className="rounded-full bg-surface-muted px-3 py-1 text-xs text-primary-600">
                 {item.specs}

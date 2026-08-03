@@ -5,16 +5,19 @@ import Image from 'next/image';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import { projectCard, blurReveal, staggerContainer, EASE_REVEAL } from '@/lib/animations';
-import { PROJECTS } from '@/lib/constants';
+import { PROJECTS, SITE } from '@/lib/constants';
 
 export default function Projects() {
+  /* Clients without published case studies ship without this section. */
+  if (PROJECTS.length === 0) return null;
+
   return (
     <section className="bg-white">
       {/* Full-bleed photo top half */}
       <div className="relative min-h-[450px] overflow-hidden">
         <Image
           src="/images/project-hero.jpg"
-          alt="Heavy Rentals Projects"
+          alt={`${SITE.name} Projects`}
           fill
           className="object-cover"
           sizes="100vw"

@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import InnerHero from '@/components/layout/InnerHero';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { SERVICES_PRIMARY, SITE } from '@/lib/constants';
+import { SERVICES_PRIMARY, SITE, PAGE_HEROES } from '@/lib/constants';
 
 export default function ServicesPage() {
   return (
     <main>
       <InnerHero
-        title="Value-Added Services"
-        subtitle="Beyond equipment rental — certified operators, logistics, and support to keep your project moving."
+        title={PAGE_HEROES.services.title}
+        subtitle={PAGE_HEROES.services.subtitle}
         breadcrumb="Services"
         image="/images/services/hero.webp"
       />
