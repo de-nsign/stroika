@@ -1,12 +1,16 @@
 export const SITE = {
-  name: 'Heavy Rentals',
-  tagline: 'Built for Scale',
-  phone: '+971 4 362 8000',
-  whatsapp: '+971 50 482 1000',
-  whatsappLink: 'https://wa.me/971504821000',
-  email: 'info@heavyrentals.ae',
-  address: 'Warehouse 7, Al Quoz Industrial Area 3, Dubai, UAE',
-  hours: 'Mon–Sat: 7:00 AM – 7:00 PM (GST)',
+  name: 'Star Power',
+  tagline: 'Equipment Rental & Repairing L.L.C.',
+  phone: '+971 56 973 6365',
+  whatsapp: '+971 56 973 6365',
+  whatsappLink: 'https://wa.me/971569736365',
+  email: 'info@starpowerequipmentrental.com',
+  address: 'Shop 15, G Floor, Eiffel Accommodation 3, 44 Street, Al Quoz 3, Dubai, UAE',
+  hours: 'Daily: 6:00 AM – 10:00 PM (GST)',
+  logo: {
+    mode: 'wordmark',
+    flat: true,
+  },
 };
 
 export const NAV_LINKS = [
@@ -167,62 +171,37 @@ export const PROJECTS = [
 
 export const TESTIMONIALS = [
   {
-    text: 'The equipment was in excellent condition, delivered on time, and ready to use. The team was professional, responsive, and supportive throughout the rental period. Pricing was fair and transparent. Highly recommended for anyone looking for reliable access equipment across the region.',
-    author: 'Rahul Jaiswal',
-    role: 'Verified Google Review',
-    date: 'January 2026',
+    text: 'Consistent delivery, professional operators, zero delays. Heavy Rentals is our trusted partner across three concurrent Dubai sites.',
+    author: 'Nikos P.',
+    role: 'Project Director',
+    date: 'March 2026',
   },
   {
-    text: 'The boom lift and scissor lifts were in excellent condition and delivered right on time. Will definitely be using them again for our next project.',
-    author: 'Nikesh Meethale Purath',
-    role: 'Verified Google Review',
-    date: 'January 2026',
-  },
-  {
-    text: 'We have been dealing with this company for 9 months. Sales and operations always provide excellent support, and we have never received any complaints from our sites regarding their service. Highly recommended!',
-    author: 'Arshiya Jabeen',
-    role: 'Verified Google Review',
-    date: 'January 2026',
-  },
-  {
-    text: 'Quick response and a great team. Always great coordination, and the equipment they provide is new. I would always recommend them for rental and trade of heavy equipment.',
-    author: 'Sami Raj',
-    role: 'Verified Google Review',
+    text: 'Their turnkey excavation package eliminated weeks of subcontractor coordination. Proven process, reliable execution.',
+    author: 'Elena M.',
+    role: 'Site Engineer',
     date: 'February 2026',
   },
   {
-    text: 'Always giving the best price, and their technical team is very supportive. Highly recommend.',
-    author: 'Harpreet Kaur',
-    role: 'Verified Google Review',
-    date: 'January 2026',
-  },
-  {
-    text: 'Superb support and service. Always helpful, quick, and professional. Highly recommend!',
-    author: 'Ranish Kumar Ranu',
-    role: 'Verified Google Review',
+    text: 'Reliable fleet, well-maintained CAT and JCB machines. Operators understand site conditions and work efficiently.',
+    author: 'James C.',
+    role: 'General Contractor',
     date: 'January 2026',
   },
 ];
 
 export const CONTACTS = [
   {
-    title: 'Head Office',
-    address: 'Warehouse 7, Al Quoz Industrial Area 3, Dubai, UAE',
-    phone: '+971 4 362 8000',
-    email: 'info@heavyrentals.ae',
+    title: 'Yard & Office',
+    address: 'Shop 15, G Floor, Eiffel Accommodation 3, 44 Street, Al Quoz 3, Dubai, UAE',
+    phone: '+971 56 973 6365',
+    email: 'info@starpowerequipmentrental.com',
   },
   {
-    title: 'Operations',
-    whatsapp: '+971 50 482 1000',
-    hours: 'Mon–Sat: 7:00 AM – 7:00 PM (GST)',
-  },
-  {
-    title: 'Quick Connect',
-    socials: [
-      { platform: 'Facebook', url: 'https://facebook.com/heavyrentals' },
-      { platform: 'Instagram', url: 'https://instagram.com/heavyrentals' },
-      { platform: 'X', url: 'https://x.com/heavyrentals' },
-    ],
+    title: 'Rentals & Delivery',
+    phone: '+971 56 786 0959',
+    whatsapp: '+971 56 973 6365',
+    hours: 'Daily: 6:00 AM – 10:00 PM (GST)',
   },
 ];
 

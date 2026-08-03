@@ -152,14 +152,14 @@ export default function ContactsPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <div className="relative h-[400px] overflow-hidden rounded-[24px]">
             <iframe
-              src="https://maps.google.com/maps?q=Al+Quoz+Industrial+Area+3,+Dubai,+UAE&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Shop%2015,%20G%20Floor,%20Eiffel%20Accommodation%203,%2044%20Street,%20Al%20Quoz%203,%20Dubai,%20UAE&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Heavy Rentals office location"
+              title="Star Power office location"
             />
             <div className="pointer-events-none absolute inset-0 rounded-[24px] ring-1 ring-inset ring-black/5" />
           </div>

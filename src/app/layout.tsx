@@ -22,13 +22,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
+  title: 'Star Power Equipment Rental Dubai — Scaffolding, Ladders & Generators',
   description:
-    "Dubai's premier partner for heavy equipment rental and full site solutions. 27+ machines, certified operators, 24/7 support.",
+    'Aluminium scaffolding, ladders, silent generators and power tools for rent in Dubai. Erection and dismantling, same-day delivery from Al Quoz. Rated 4.9 from 182 Google reviews.',
   openGraph: {
-    title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
+    title: 'Star Power Equipment Rental & Repairing L.L.C. — Dubai',
     description:
-      "Dubai's premier partner for heavy equipment rental and full site solutions.",
+      'Scaffolding, ladders, silent generators, cutting and cleaning machines for rent across Dubai. Open 7 days, 6am–10pm. Delivery to site.',
     type: 'website',
   },
 };
