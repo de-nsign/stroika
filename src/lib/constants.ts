@@ -167,21 +167,39 @@ export const PROJECTS = [
 
 export const TESTIMONIALS = [
   {
-    text: 'Consistent delivery, professional operators, zero delays. Heavy Rentals is our trusted partner across three concurrent Dubai sites.',
-    author: 'Nikos P.',
-    role: 'Project Director',
-    date: 'March 2026',
+    text: 'The equipment was in excellent condition, delivered on time, and ready to use. The team was professional, responsive, and supportive throughout the rental period. Pricing was fair and transparent. Highly recommended for anyone looking for reliable access equipment across the region.',
+    author: 'Rahul Jaiswal',
+    role: 'Verified Google Review',
+    date: 'January 2026',
   },
   {
-    text: 'Their turnkey excavation package eliminated weeks of subcontractor coordination. Proven process, reliable execution.',
-    author: 'Elena M.',
-    role: 'Site Engineer',
+    text: 'The boom lift and scissor lifts were in excellent condition and delivered right on time. Will definitely be using them again for our next project.',
+    author: 'Nikesh Meethale Purath',
+    role: 'Verified Google Review',
+    date: 'January 2026',
+  },
+  {
+    text: 'We have been dealing with this company for 9 months. Sales and operations always provide excellent support, and we have never received any complaints from our sites regarding their service. Highly recommended!',
+    author: 'Arshiya Jabeen',
+    role: 'Verified Google Review',
+    date: 'January 2026',
+  },
+  {
+    text: 'Quick response and a great team. Always great coordination, and the equipment they provide is new. I would always recommend them for rental and trade of heavy equipment.',
+    author: 'Sami Raj',
+    role: 'Verified Google Review',
     date: 'February 2026',
   },
   {
-    text: 'Reliable fleet, well-maintained CAT and JCB machines. Operators understand site conditions and work efficiently.',
-    author: 'James C.',
-    role: 'General Contractor',
+    text: 'Always giving the best price, and their technical team is very supportive. Highly recommend.',
+    author: 'Harpreet Kaur',
+    role: 'Verified Google Review',
+    date: 'January 2026',
+  },
+  {
+    text: 'Superb support and service. Always helpful, quick, and professional. Highly recommend!',
+    author: 'Ranish Kumar Ranu',
+    role: 'Verified Google Review',
     date: 'January 2026',
   },
 ];
