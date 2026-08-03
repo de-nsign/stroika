@@ -22,13 +22,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
+  title: 'Al Badar Mobile Crane — Mobile Crane Rental Dubai',
   description:
-    "Dubai's premier partner for heavy equipment rental and full site solutions. 27+ machines, certified operators, 24/7 support.",
+    'Mobile crane rental in Dubai from 25 to 700 tonnes. Certified operators, a modern maintained fleet and 24/7 emergency lifting support for construction, industrial and infrastructure projects.',
   openGraph: {
-    title: 'Heavy Rentals — Heavy Equipment Rental Dubai',
+    title: 'Al Badar Mobile Crane — Mobile Crane Rental Dubai',
     description:
-      "Dubai's premier partner for heavy equipment rental and full site solutions.",
+      'Mobile crane rental in Dubai from 25 to 700 tonnes. Certified operators, modern fleet, 24/7 support.',
     type: 'website',
   },
 };

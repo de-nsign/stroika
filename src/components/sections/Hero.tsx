@@ -101,18 +101,15 @@ export default function Hero() {
               className="mt-8 flex gap-10"
               variants={heroSubtitle}
             >
-              <div>
-                <span className="font-display text-4xl font-light text-white">
-                  <CountUp target={30} />+
-                </span>
-                <p className="mt-1 text-sm text-white/50">machines</p>
-              </div>
-              <div>
-                <span className="font-display text-4xl font-light text-white">
-                  <CountUp target={3} duration={0.8} />
-                </span>
-                <p className="mt-1 text-sm text-white/50">equipment classes</p>
-              </div>
+              {HERO.stats.map((stat, i) => (
+                <div key={stat.label}>
+                  <span className="font-display text-4xl font-light text-white">
+                    <CountUp target={stat.target} duration={i === 0 ? undefined : 0.8} />
+                    {stat.suffix}
+                  </span>
+                  <p className="mt-1 text-sm text-white/50">{stat.label}</p>
+                </div>
+              ))}
             </motion.div>
 
             {/* CTA buttons — appear quickly, not blocked */}

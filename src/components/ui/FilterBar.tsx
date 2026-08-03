@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import type { WeightClass, EquipmentType } from '@/lib/constants';
-import { WEIGHT_CLASS_LABELS, EQUIPMENT_TYPE_LABELS } from '@/lib/constants';
+import { WEIGHT_CLASS_LABELS, EQUIPMENT_TYPE_LABELS, FLEET } from '@/lib/constants';
 
 interface FilterBarProps {
   activeClass: WeightClass | 'all';
@@ -72,21 +72,27 @@ export default function FilterBar({
   onClassChange,
   onTypeChange,
 }: FilterBarProps) {
+  /* Only offer filters the current fleet can actually satisfy. A single-category
+     client (say, cranes only) would otherwise get a row of dead filters. */
+  const presentClasses = new Set(FLEET.map((e) => e.weightClass));
+  const presentTypes = new Set(FLEET.map((e) => e.type));
+
   const classOptions: { value: WeightClass | 'all'; label: string }[] = [
     { value: 'all', label: 'All' },
-    ...Object.entries(WEIGHT_CLASS_LABELS).map(([value, label]) => ({
-      value: value as WeightClass,
-      label,
-    })),
+    ...Object.entries(WEIGHT_CLASS_LABELS)
+      .filter(([value]) => presentClasses.has(value as WeightClass))
+      .map(([value, label]) => ({ value: value as WeightClass, label })),
   ];
 
   const typeOptions: { value: EquipmentType | 'all'; label: string }[] = [
     { value: 'all', label: 'All Types' },
-    ...Object.entries(EQUIPMENT_TYPE_LABELS).map(([value, label]) => ({
-      value: value as EquipmentType,
-      label,
-    })),
+    ...Object.entries(EQUIPMENT_TYPE_LABELS)
+      .filter(([value]) => presentTypes.has(value as EquipmentType))
+      .map(([value, label]) => ({ value: value as EquipmentType, label })),
   ];
+
+  /* A lone "All Types" control is noise — hide the whole row. */
+  const showTypeRow = typeOptions.length > 2;
 
   return (
     <motion.div
@@ -109,16 +115,18 @@ export default function FilterBar({
         </div>
 
         {/* Row 2 — Type */}
-        <div className="flex flex-col gap-1.5 lg:flex-row lg:items-center lg:gap-3">
-          <span className="text-xs font-semibold tracking-wider text-primary-500 uppercase lg:w-12 lg:shrink-0">
-            Type
-          </span>
-          <SegmentedControl
-            options={typeOptions}
-            value={activeType}
-            onChange={onTypeChange}
-          />
-        </div>
+        {showTypeRow && (
+          <div className="flex flex-col gap-1.5 lg:flex-row lg:items-center lg:gap-3">
+            <span className="text-xs font-semibold tracking-wider text-primary-500 uppercase lg:w-12 lg:shrink-0">
+              Type
+            </span>
+            <SegmentedControl
+              options={typeOptions}
+              value={activeType}
+              onChange={onTypeChange}
+            />
+          </div>
+        )}
       </div>
     </motion.div>
   );
