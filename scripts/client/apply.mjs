@@ -21,6 +21,7 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { installFavicon } from './lib/favicon.mjs';
 
 const argv = process.argv.slice(2);
 const slug = argv.find((a) => !a.startsWith('--'));
@@ -176,6 +177,15 @@ async function run() {
     return;
   }
   for (const [file, content] of byFile) await writeFile(file, content);
+
+  /* Browser tab, bookmarks and history — the last place the template's own
+     brand survives, and the one a page screenshot never shows. */
+  if (assets?.files?.mark) {
+    const written = await installFavicon(join('public', assets.files.mark.replace(/^\//, '')));
+    console.log(`  ✓ src/app › favicon (${written.join(', ')})`);
+  } else {
+    console.log('  ! no brand mark — template favicon left in place, tab will show the wrong brand');
+  }
 
   console.log(`\n✔ ${slug} identity applied to ${byFile.size} files`);
   console.log('next: write the editorial content (HERO / KEY_ASSETS / STATS / MISSION / PILLARS / FLEET / SOLUTIONS / SERVICES), then npm run build');

@@ -164,10 +164,17 @@ Then:
 node scripts/client/apply.mjs <slug>          # --dry to preview
 ```
 
-This rewrites `SITE`, `CONTACTS`, page metadata, the accent tokens and the map
-embed. Every patch is anchored on an exact pattern and the script refuses to
-write anything if one anchor is missing — so if the template was refactored, you
-get a loud failure, never a silent half-application.
+This rewrites `SITE`, `CONTACTS`, page metadata and the map embed, and installs
+the client's mark as `icon.png`, `apple-icon.png` and `favicon.ico` while
+removing the template's `icon.svg`. Every patch is anchored on an exact pattern
+and the script refuses to write anything if one anchor is missing — so if the
+template was refactored, you get a loud failure, never a silent half-application.
+
+The favicon matters more than it looks: the browser tab, bookmarks and history
+are the last place the template's own brand survives, and no page screenshot
+ever shows them. Check the actual tab. If the client's logo is a detailed
+emblem it will be unreadable at 16px — say so and ask them for a simplified
+mark, the same way you ask for a vector logo.
 
 ## 6. Editorial content
 
