@@ -1,7 +1,12 @@
+import Image from 'next/image';
 import { SITE } from '@/lib/constants';
 
-/* Brand logo: client mark or wordmark, driven by SITE.logo.
-   Rendered as JSX (not an <img>) so the brand name always reflects SITE.name. */
+/* Brand logo, driven by SITE.logo (written by scripts/client/apply.mjs).
+
+   mode 'image'    — the client's own artwork. A colour emblem (flat: false) is
+                     illegible on the dark footer, so it sits on a light plate
+                     there instead of being recoloured.
+   no SITE.logo    — the template's own mark plus SITE.name as a wordmark. */
 export default function Logo({
   className = 'h-7',
   textClassName = 'text-primary',
@@ -9,6 +14,32 @@ export default function Logo({
   className?: string;
   textClassName?: string;
 }) {
+  const logo = SITE.logo as
+    | { mode?: string; flat?: boolean; src?: string; srcDark?: string }
+    | undefined;
+  const onDark = textClassName.includes('white');
+
+  if (logo?.src) {
+    const src = (onDark && logo.srcDark) || logo.src;
+    const needsPlate = onDark && logo.flat === false;
+    return (
+      <span
+        className={`flex items-center ${className} ${
+          needsPlate ? 'rounded-md bg-white px-2 py-1' : ''
+        }`}
+      >
+        <Image
+          src={src}
+          alt={SITE.name}
+          width={720}
+          height={200}
+          priority
+          className="h-full w-auto object-contain"
+        />
+      </span>
+    );
+  }
+
   return (
     <span className={`flex items-center gap-2 ${className}`}>
       <svg

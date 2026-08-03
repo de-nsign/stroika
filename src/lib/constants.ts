@@ -48,6 +48,10 @@ export const HERO = {
     'Rental, trading, training and AMC from Dubai. Earth moving, lifting, access platforms, air and power systems — supplied with or without operators, for a day or for years.',
   cta_primary: 'Explore Equipment',
   cta_secondary: 'Request a Quote',
+  stats: [
+    { value: 5, label: 'equipment families' },
+    { value: 3, label: 'regions served' },
+  ] as { value: number; suffix?: string; label: string }[],
 };
 
 export const KEY_ASSETS = {
