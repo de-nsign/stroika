@@ -96,7 +96,7 @@ export default function Hero() {
               {HERO.subheading}
             </motion.p>
 
-            {/* Stats: count-up */}
+            {/* Stats: count-up — values come from HERO.stats, never hardcoded */}
             <motion.div
               className="mt-8 flex gap-10"
               variants={heroSubtitle}
