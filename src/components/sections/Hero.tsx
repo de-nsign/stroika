@@ -104,8 +104,8 @@ export default function Hero() {
               {HERO.stats.map((stat, i) => (
                 <div key={stat.label}>
                   <span className="font-display text-4xl font-light text-white">
-                    <CountUp target={stat.value} duration={i === 0 ? undefined : 0.8} />
-                    {stat.suffix ?? ''}
+                    <CountUp target={stat.target} duration={i === 0 ? undefined : 0.8} />
+                    {stat.suffix}
                   </span>
                   <p className="mt-1 text-sm text-white/50">{stat.label}</p>
                 </div>

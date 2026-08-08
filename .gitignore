@@ -3,6 +3,10 @@ node_modules/
 .env*.local
 *.tsbuildinfo
 .DS_Store
-.vercel
+# Client dossiers: scraped third-party text, photos and contact data.
+# Never commit — it is other companies data sitting in the template repo.
+.context/
 
+# Local Vercel CLI project link. Committed, it repoints every other
+# working copy at whichever client was deployed last.
 .vercel/

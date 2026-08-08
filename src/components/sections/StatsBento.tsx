@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedHeading from '@/components/ui/AnimatedHeading';
 import { fadeInUp, tabSwitch, staggerContainer } from '@/lib/animations';
-import { STATS_TABS } from '@/lib/constants';
+import { STATS_TABS, STATS_HEADING } from '@/lib/constants';
 
 const TAB_ICONS = ['⚙️', '🚛', '🔧'];
 
@@ -15,9 +15,9 @@ export default function StatsBento() {
     <section id="services" className="bg-surface-muted py-28 lg:py-36">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
         <AnimatedHeading
-          row1={['Powering', "Dubai's", 'largest']}
-          row2={['construction', 'projects']}
-          accentWords={["Dubai's", 'construction']}
+          row1={STATS_HEADING.row1}
+          row2={STATS_HEADING.row2}
+          accentWords={STATS_HEADING.accent}
         />
 
         {/* Tabs — donor style: pill with icon + text */}

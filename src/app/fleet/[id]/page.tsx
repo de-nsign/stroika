@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${item.name} — Rent in Dubai | ${SITE.name}`,
     description: `Rent ${item.name} (${[item.brand, item.weight].filter(Boolean).join(', ')}) in Dubai. ${item.specs || ''} Professional equipment rental with certified operators.`,
     openGraph: {
-      title: `${item.name} — ${SITE.name} Equipment Rental`,
+      title: `${item.name} — ${SITE.name}`,
       description: `Rent ${item.name} in Dubai. ${item.specs || ''}`,
       type: 'website',
     },

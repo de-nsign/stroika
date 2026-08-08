@@ -15,12 +15,7 @@ import { SOLUTIONS, SITE, PAGE_HEROES } from '@/lib/constants';
 export default function SolutionsPage() {
   return (
     <main>
-      <InnerHero
-        title={PAGE_HEROES.solutions.title}
-        subtitle={PAGE_HEROES.solutions.subtitle}
-        breadcrumb="Solutions"
-        image="/images/solutions/hero.webp"
-      />
+      <InnerHero {...PAGE_HEROES.solutions} />
 
       <section className="bg-white pt-12 pb-20 lg:pt-16 lg:pb-28">
         <motion.div

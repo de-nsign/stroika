@@ -11,7 +11,9 @@ import { staggerContainer } from '@/lib/animations';
 import {
   FLEET,
   type WeightClass,
-  type EquipmentType, PAGE_HEROES } from '@/lib/constants';
+  type EquipmentType,
+  PAGE_HEROES,
+} from '@/lib/constants';
 
 function FleetContent() {
   const searchParams = useSearchParams();
@@ -75,12 +77,7 @@ function FleetContent() {
 export default function FleetPage() {
   return (
     <main>
-      <InnerHero
-        title={PAGE_HEROES.fleet.title}
-        subtitle={PAGE_HEROES.fleet.subtitle}
-        breadcrumb="Equipment"
-        image="/images/fleet/hf_20260330_071733_cff68166-e762-4167-8917-e35197661f72.webp"
-      />
+      <InnerHero {...PAGE_HEROES.fleet} />
 
       <section className="bg-white py-12 lg:py-20">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">

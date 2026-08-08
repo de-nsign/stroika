@@ -12,17 +12,12 @@ import {
 import InnerHero from '@/components/layout/InnerHero';
 import QuoteSection from '@/components/sections/QuoteSection';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { SITE } from '@/lib/constants';
+import { SITE, PAGE_HEROES } from '@/lib/constants';
 
 export default function ContactsPage() {
   return (
     <main>
-      <InnerHero
-        title="Get in Touch"
-        subtitle="Our team is ready to help you find the right equipment and services for your project."
-        breadcrumb="Contacts"
-        image="/images/contacts/hero.webp"
-      />
+      <InnerHero {...PAGE_HEROES.contacts} />
 
       {/* Contact grid */}
       <section className="bg-white py-20 lg:py-28">
@@ -152,14 +147,14 @@ export default function ContactsPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <div className="relative h-[400px] overflow-hidden rounded-[24px]">
             <iframe
-              src="https://maps.google.com/maps?q=Mai%20Tower,%20Al%20Qusais,%20Dubai&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(SITE.address).replace(/%2C/g, ',')}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="GrowthLift office location"
+              title={`${SITE.name} office location`}
             />
             <div className="pointer-events-none absolute inset-0 rounded-[24px] ring-1 ring-inset ring-black/5" />
           </div>

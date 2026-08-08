@@ -11,12 +11,7 @@ import { SERVICES_PRIMARY, SITE, PAGE_HEROES } from '@/lib/constants';
 export default function ServicesPage() {
   return (
     <main>
-      <InnerHero
-        title={PAGE_HEROES.services.title}
-        subtitle={PAGE_HEROES.services.subtitle}
-        breadcrumb="Services"
-        image="/images/services/hero.webp"
-      />
+      <InnerHero {...PAGE_HEROES.services} />
 
       {/* Primary services — horizontal cards in 2-col grid */}
       <section className="bg-white pt-12 pb-20 lg:pt-16 lg:pb-28">

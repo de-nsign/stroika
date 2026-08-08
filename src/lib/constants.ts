@@ -7,6 +7,9 @@ export const SITE = {
   email: 'info@thegrowthlift.com',
   address: 'Mai Tower, Al Qusais, Dubai, UAE',
   hours: '24/7 technical support · Mon–Sat office hours',
+  /* Set to 'image' with the client's own artwork by scripts/client/apply.mjs.
+     GrowthLift's is a full-colour emblem (flat: false), so on dark surfaces it
+     keeps its artwork on a light plate rather than a white knockout. */
   logo: {
     mode: 'image',
     flat: false,
@@ -23,35 +26,58 @@ export const NAV_LINKS = [
   { label: 'Contacts', href: '/contacts' },
 ];
 
-/* Inner-page hero copy lives here so no client wording is hardcoded in a page. */
-export const PAGE_HEROES = {
-  fleet: {
-    title: 'Our Equipment',
-    subtitle:
-      'Earth moving, access platforms, lifting, air and power systems from Caterpillar, Komatsu, Genie, JLG and other leading manufacturers.',
-  },
-  solutions: {
-    title: 'Rental & Service Solutions',
-    subtitle:
-      'Short-term, long-term, with or without operator — plus AMC, repairs and spare parts across GCC, Asia and Africa.',
-  },
-  services: {
-    title: 'Services',
-    subtitle:
-      'Operators, spare parts, training and multi-brand technical support to keep your machines working.',
-  },
-};
-
 export const HERO = {
   heading: 'Heavy Equipment for the Middle East, Asia & Africa',
   subheading:
     'Rental, trading, training and AMC from Dubai. Earth moving, lifting, access platforms, air and power systems — supplied with or without operators, for a day or for years.',
   cta_primary: 'Explore Equipment',
   cta_secondary: 'Request a Quote',
+  /* Animated counters under the hero copy. `suffix` is rendered verbatim. */
   stats: [
-    { value: 5, label: 'equipment families' },
-    { value: 3, label: 'regions served' },
-  ] as { value: number; suffix?: string; label: string }[],
+    { target: 5, suffix: '', label: 'equipment families' },
+    { target: 3, suffix: '', label: 'regions served' },
+  ],
+};
+
+/* Inner-page hero copy. Kept here rather than inline in each page file so a
+   client rollout is a single data edit — pages spread {...PAGE_HEROES.x}. */
+export const PAGE_HEROES = {
+  fleet: {
+    title: 'Our Equipment',
+    subtitle:
+      'Earth moving, access platforms, lifting, air and power systems from Caterpillar, Komatsu, Genie, JLG and other leading manufacturers.',
+    breadcrumb: 'Equipment',
+    image: '/images/fleet/hf_20260330_071733_cff68166-e762-4167-8917-e35197661f72.webp',
+  },
+  solutions: {
+    title: 'Rental & Service Solutions',
+    subtitle:
+      'Short-term, long-term, with or without operator — plus AMC, repairs and spare parts across GCC, Asia and Africa.',
+    breadcrumb: 'Solutions',
+    image: '/images/solutions/hero.webp',
+  },
+  services: {
+    title: 'Services',
+    subtitle:
+      'Operators, spare parts, training and multi-brand technical support to keep your machines working.',
+    breadcrumb: 'Services',
+    image: '/images/services/hero.webp',
+  },
+  contacts: {
+    title: 'Get in Touch',
+    subtitle:
+      'Our team is ready to help you find the right equipment and services for your project.',
+    breadcrumb: 'Contacts',
+    image: '/images/contacts/hero.webp',
+  },
+};
+
+/* Headings split into animated word rows. Words in `accent` are highlighted and
+   must match a word in row1/row2 exactly. */
+export const STATS_HEADING = {
+  row1: ['Powering', "Dubai's", 'largest'],
+  row2: ['construction', 'projects'],
+  accent: ["Dubai's", 'construction'],
 };
 
 export const KEY_ASSETS = {
